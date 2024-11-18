@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const showMore5 = document.getElementById('showMore5');
     const showMore6 = document.getElementById('showMore6');
     const showMore7 = document.getElementById('showMore7');
+    const showMore8 = document.getElementById('showMore8');
+    const showMore9 = document.getElementById('showMore9');
     const hiddenElement1 = document.getElementById('hiddenElement1');
     const hiddenElement2 = document.getElementById('hiddenElement2');
     const hiddenElement3 = document.getElementById('hiddenElement3');
@@ -13,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const hiddenElement5 = document.getElementById('hiddenElement5');
     const hiddenElement6 = document.getElementById('hiddenElement6');
     const hiddenElement7 = document.getElementById('hiddenElement7');
+    const hiddenElement8 = document.getElementById('hiddenElement8');
+    const hiddenElement9 = document.getElementById('hiddenElement9');
     
     const i = document.getElementById('i');
     const down = document.getElementById('down');
@@ -25,10 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const hidden5 = document.getElementById('hidden5');
     const hidden6 = document.getElementById('hidden6');
     const hidden7 = document.getElementById('hidden7');
+    const hidden8 = document.getElementById('hidden8');
+    const hidden9 = document.getElementById('hidden9');
 
-    const showMoreButtons = [showMore1, showMore2, showMore3, showMore4, showMore5, showMore6, showMore7];
-    const hiddenElements = [hiddenElement1, hiddenElement2, hiddenElement3, hiddenElement4, hiddenElement5, hiddenElement6, hiddenElement7];
-    const hiddenElements2 = [hidden, hidden2, hidden3, hidden4, hidden5, hidden6, hidden7];
+    const showMoreButtons = [showMore1, showMore2, showMore3, showMore4, showMore5, showMore6, showMore7, showMore8, showMore9];
+    const hiddenElements = [hiddenElement1, hiddenElement2, hiddenElement3, hiddenElement4, hiddenElement5, hiddenElement6, hiddenElement7, hiddenElement8, hiddenElement9];
+    const hiddenElements2 = [hidden, hidden2, hidden3, hidden4, hidden5, hidden6, hidden7, hidden8, hidden9];
 
     hiddenElements2.forEach((button2, index) => {
         if (button2 && hiddenElements[index]) {
@@ -66,12 +72,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         lastScrollY = currentScrollY;
     });
-
+    const button_up = document.getElementById('button_up')
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            button_up.style.opacity = '1'
+        } else {
+            button_up.style.opacity = '0'
+        }
+    });
     document.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
             header.style.position = 'fixed';
         } else {
             header.style.position = 'absolute';
+        }
+    });
+    const contact = document.getElementById('contact')
+    const contactA = contact.getBoundingClientRect().top  - 450; 
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > contactA) {
+            button_up.style.backgroundColor = '#363338';
+            button_up.style.color = '#2082e3';
+            button_up.style.border = '2px solid #363338';
+        } else {
+            button_up.style.backgroundColor = '#2082e3';
+            button_up.style.color = '#363338';
+            button_up.style.border = '2px solid #2082e3';
         }
     });
 

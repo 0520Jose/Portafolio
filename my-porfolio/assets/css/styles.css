@@ -25,7 +25,7 @@ header {
     align-items: center;
     z-index: 6;
     background-color: #363338;
-    box-shadow: #4c4b4c 0px 0px 10px;
+    box-shadow: #2a2a2a 0px 0px 10px;
 }
 nav {
     width: 50%;
@@ -64,10 +64,10 @@ nav ul li a {
     width: 100%;
     height: fit-content;
     color: #fdfefe;
+    transition: all 0.5s ease-in-out;
 }
 nav ul li:hover a {
     color: #2082e3;
-    transition: all 0.5s;
     transform: scale(1.2);
 }
 .title {
@@ -130,9 +130,6 @@ section::before {
     margin-top: -8%;
 
 }
-.i:hover {
-    transform: rotate(360deg);
-}
 .aboutMe {
     width: 50%;
     height: fit-content;
@@ -163,11 +160,11 @@ section::before {
     font-weight: 700;
     border: #fdfefe solid 2px;
     background-color: #fdfefe00;
+    transition: all 0.5s ease-in-out;
 }
 .button:hover {
     background-color: #2082e3;
     color: #fdfefe;
-    transition: all 0.5s;
     border: #2082e3 solid 2px;
 }
 .contact {
@@ -178,7 +175,8 @@ section::before {
     padding: 5%;
     padding-left: 35%;
     position: relative;
-    top: 14vh;
+    top: 0;
+    margin-top: 14vh;
 }
 .contact h1 {
     width: 50%;
@@ -186,9 +184,6 @@ section::before {
     text-align: center;
     font-size: 50px;
     margin-bottom: 5%;
-}
-#lcontact {
-    background-color: #fdfefe;
 }
 .icons{
     width: 50%;
@@ -200,15 +195,15 @@ section::before {
     width: 25%;
 }
 .icon {
-    width: 100%;
+    width: 50px;
     font-size: 50px;
     color: #fdfefe;
     justify-content: center;
+    transition: all 0.5s ease-in-out;
 }
 .icon:hover {
     color: #363338;
     transform: scale(1.2);
-    transition: all 0.5s;
 }
 .skills {
     width: 100%;
@@ -251,10 +246,19 @@ section::before {
     border-radius: 10px;
     padding: 5%;
     z-index: 3;
+    justify-content: space-between;
 }
 .skill ion-icon {
-    width: 100%;
+    width: 80px;
     font-size: 80px;
+    transition: all 0.5s ease-in-out;
+}
+.skill h2 ion-icon {
+    width: 80px;
+    font-size: 80px;
+    margin-left: 38%;
+    margin-bottom: 5%;
+    transition: all 0.5s ease-in-out;
 }
 .skill button {
     width: 33.33%;
@@ -264,21 +268,55 @@ section::before {
 .view {
     color: #fdfefe;
     opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+}
+.icon_svg {
+    width: 80px;
+    height: auto;
+    fill: #fbfbfb;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    padding: 3%;
+}
+.skill h2 svg {
+    width: 80px;
+    height: auto;
+    fill: #fbfbfb;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 5%;
+    margin-left: 38%;
+}
+.skill h2 svg:hover {
+    transform: scale(1.2);
+}
+.skill h2 {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    padding: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.icon_svg:hover {
+    fill: #2082e3;
+    transform: scale(1.2);
 }
 .skill ion-icon:hover {
     color: #2082e3;
     transform: scale(1.2);
-    transition: all 0.5s;
 }
 .skill div h2 ion-icon:hover {
     color: #fdfefe;
     transform: scale(1.2);
-    transition: all 0.5s;
 }
 .skill ion-icon:hover + .view {
     opacity: 1;
-    transition: all 0.5s;
-
+}
+.icon_svg:hover + .view {
+    opacity: 1;
 }
 .info {
     margin-top: 5%;
@@ -286,13 +324,26 @@ section::before {
 .projects {
     width: 100%;
     height: fit-content;
-    background-color: #fdfefe;
+    background-image: url(/my-porfolio/assets/images/fondo_code2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #363338;
     padding: 10%;
     justify-content: center;
     align-items: center;
     position: relative;
     top: 14vh;
+    z-index: 1;
+}
+.projects::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color:#f0f0f09f;
+    z-index: 0;
 }
 .projects h1 {
     width: 100%;
@@ -300,6 +351,9 @@ section::before {
     text-align: center;
     font-size: 50px;
     margin-bottom: 5%;
+    z-index: 3;
+    position: relative;
+    color: #303030;
 }
 .project {
     width: 100%;
@@ -307,38 +361,82 @@ section::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    z-index: 3;
+    position: relative;
 }
 .project1 {
-    width: 32%;
-    height: fit-content;
+    width: 30%;
+    height: 80vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     box-shadow: #a4a3a4 0px 0px 10px;
-    border-radius: 10px;
-    padding: 1%;
-    margin-bottom: 2.5%;
+    background-color: #f0f0f0;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 5%;
+    position: relative;
+    text-align: justify;
+    transition: all 0.5s ease-in-out;
+}
+.project1:hover {
+    box-shadow: #3d3d3d 0 0 10px;
+}
+.project1:hover img{
+    transform: scale(120%);
 }
 .button2 {
-    width: 30%;
-    height: 7vh;
+    width: 50%;
+    height: fit-content;
     border-radius: 25px;
-    margin-top: 5%;
-    margin-left: 35%;
+    padding: 5%;
     color: #fdfefe;
     font-size: normal;
     font-weight: 700;
     border: #303030 solid 2px;
     background-color: #303030;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
 }
 .button2:hover {
     background-color: #2082e3;
     color: #fdfefe;
-    transition: all 0.5s;
+    transform: scale(1.1);
     border: #2082e3 solid 2px;
 }
-#hiddenElement1, #hiddenElement2, #hiddenElement3, #hiddenElement4, #hiddenElement5, #hiddenElement6, #hiddenElement7 {
+.project1 p {
+    padding: 5%;
+}
+.project1 h2 {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    padding: 8%;
+}
+.boton {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    justify-content: center;
+}
+.img_proyect {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+.img_proyect img {
+    width: 100%;
+    height: fit-content;
+    transition: all 0.5s ease-in-out;
+}
+.line {
+    width: 100%;
+    height: 30px;
+    background-color: #363338;
+}
+#hiddenElement1, #hiddenElement2, #hiddenElement3, #hiddenElement4, #hiddenElement5, #hiddenElement6, #hiddenElement7, #hiddenElement8, #hiddenElement9 {
     width: 32%;
     height: 55vh;
     display: none;
@@ -371,7 +469,7 @@ section::before {
 #header {
     transition: transform 0.75s ease-in-out;
 }
-#hidden1, #hidden2, #hidden3, #hidden4, #hidden5, #hidden6, #hidden7 {
+#hidden1, #hidden2, #hidden3, #hidden4, #hidden5, #hidden6, #hidden7, #hidden8, #hidden9 {
     width: 40px;
     height: 40px;
     justify-content: center;
@@ -383,10 +481,10 @@ section::before {
     position: absolute;
     right: 0;
     top: 0;
-}
-#hidden1:hover, #hidden2:hover, #hidden3:hover, #hidden4:hover, #hidden5:hover, #hidden6:hover, #hidden7:hover {
-    transform: scale(1.5);
     transition: all 0.5s ease-in-out; 
+}
+#hidden1:hover, #hidden2:hover, #hidden3:hover, #hidden4:hover, #hidden5:hover, #hidden6:hover, #hidden7:hover, #hidden8:hover, #hidden9:hover {
+    transform: scale(1.5);
 }
 footer {
     width: 100%;
@@ -398,9 +496,7 @@ footer {
     background-color: #171616;
     color: #fdfefe;
     position: relative;
-    top: 14vh;
 }
-
 .frase {
     width:100%;
     height: fit-content;
@@ -439,8 +535,11 @@ footer {
     0% {
         transform: rotate(20deg);
     }
-    100% {
+    50% {
         transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(20deg);
     }
 }
 #run {
@@ -522,4 +621,38 @@ footer {
 .contact-form button {
     background-color: #363338;
     border: #363338 2px solid;
+}
+.button_up {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 1%;
+    right: 1%;
+    z-index: 6;
+    background-color: #2082e3;
+    border: #2082e3 2px solid;
+    color: #363338;
+    text-align: center;
+    border-radius: 5px;
+    padding: .60%;
+    transition: all .5s ease-in-out;
+}
+.button_up svg {
+    transition: all .5s ease-in-out;
+}
+.button_up:hover {
+    transform: scale(1.1);
+    color: #363338;
+    background-color: #f0f0f0;
+    border: #f0f0f0 2px solid;
+}
+.button_up:hover svg {
+    transform: scale(1.1);
+}
+#button_up {
+    opacity: 0;
 }
