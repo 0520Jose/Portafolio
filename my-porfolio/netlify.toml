@@ -1,0 +1,8 @@
+[build]
+  publish = "/"
+  command = "# comando de build si necesitas uno"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

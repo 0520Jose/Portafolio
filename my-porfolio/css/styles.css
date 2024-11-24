@@ -95,7 +95,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    background-image: url(/my-porfolio/assets/images/fondo.jpeg);
+    background-image: url(/assets/images/fondo.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     top: 14vh;
@@ -208,7 +208,7 @@ section::before {
 .skills {
     width: 100%;
     height: fit-content;
-    background-image: url(/my-porfolio/assets/images/fondo_code.jpg);
+    background-image: url(/assets/images/fondo_code.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: #fdfefe;
@@ -324,7 +324,7 @@ section::before {
 .projects {
     width: 100%;
     height: fit-content;
-    background-image: url(/my-porfolio/assets/images/fondo_code2.png);
+    background-image: url(/assets/images/fondo_code2.png);
     background-size: cover;
     background-repeat: no-repeat;
     color: #363338;
