@@ -49,15 +49,6 @@ nav ul li {
     align-items: center;
     text-decoration: none;
 }
-nav ul button {
-    width: 20%;
-    height: 10vh;
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
 nav ul li a {
     text-decoration: none;
     text-align: center;
@@ -77,7 +68,7 @@ nav ul li:hover a {
     align-items: center;
     position: relative;
 }
-.figure{
+.figure {
     width: 10%;
     height: fit-content;
     position: absolute;
@@ -137,6 +128,9 @@ section::before {
     position: relative;
     padding: 5%;
 }
+.aboutMe p {
+    text-align: justify;
+}
 .name {
     color: #2082e3;
     margin-left: 1%;
@@ -153,7 +147,7 @@ section::before {
     width: 30%;
     height: 7vh;
     border-radius: 25px;
-    margin-top: 5%;
+    margin-top: 7%;
     margin-left: 35%;
     color: #fdfefe;
     font-size: normal;
@@ -212,7 +206,7 @@ section::before {
     background-size: cover;
     background-repeat: no-repeat;
     color: #fdfefe;
-    padding: 5%;
+    padding: 7%;
     padding-left: 30%;
     position: relative;
     top: 14vh;
@@ -299,6 +293,9 @@ section::before {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+}
+.skill .info {
+    text-align: justify;
 }
 .icon_svg:hover {
     fill: #2082e3;
@@ -441,7 +438,7 @@ section::before {
     height: 55vh;
     display: none;
     position: absolute;
-    top: 32vh;
+    top: 35vh;
     background-color: #2082e3;
     padding: 2%;
     z-index: 5;
@@ -655,4 +652,139 @@ footer {
 }
 #button_up {
     opacity: 0;
+}
+.contMenu {
+    display: none;
+}
+@media screen and (max-width: 376px) {
+    section {
+        flex-direction: column;
+        height: 140vh;
+    }
+    nav {
+        display: none;
+    }
+    .decoration {
+        margin-top: 5%;
+        width: 100%;
+    }
+    .aboutMe {
+        width: 100%;
+    }
+    .frase {
+        margin-top: 0%;
+        margin-left: 0%;
+        font-size: 22px;
+    }
+    .project {
+        flex-direction: column;
+    }
+    .project1 {
+        width: 100%;
+        height: 80vh;
+    }
+    .skill {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .skills {
+        padding: 11%;
+    }
+    .skills h1 {
+        width: 100%;
+    }
+    .skill ion-icon {
+        width: 50px;
+        font-size: 50px;
+    }
+    .skill h2 ion-icon {
+        width: 50px;
+        font-size: 50px;
+    }
+    .icon_svg {
+        width: 50px;
+    }
+    .contact {
+        padding: 11%;
+    }
+    .contact h1 {
+        width: 100%;
+    }
+    .icons {
+        width: 100%;
+        margin-left: 5%;
+    }
+    .contact-form {
+        margin-left: 0%;
+    }
+    .contact-form h1 {
+        font-size: 30px;
+    }
+    .button {
+        width: 50%;
+        padding: 2%;
+        margin-left: 25%;
+    }
+    #figure {
+        left: 85%;
+    }
+    .figure {
+        width: 8%;
+    }
+    .button_up {
+        padding: 2%;
+    }
+    .title {
+        width: 50%;
+        margin-left: 5%;
+    }
+    .title h1 {
+        font-size: 20px;
+    }
+    header {
+        height: 14vh;
+    }
+    .contMenu {
+        width: 20%;
+        display: block;
+    }
+    .contMenu ul {
+        list-style: none;
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 7%;
+        top: 14vh;
+        left: 0;
+        background-color: #fdfefe;
+    }
+    .contMenu li {
+        margin-bottom: 2%;
+    }
+    .contMenu a {
+        text-decoration: none;
+        color: #363338;
+        font-size: 20px;
+    }
+    .menu {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        font-size: 50px;
+        color: #fdfefe;
+        background-color: #363338;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    #hiddenElement1, #hiddenElement2, #hiddenElement3, #hiddenElement4, #hiddenElement5, #hiddenElement6, #hiddenElement7, #hiddenElement8, #hiddenElement9 {
+        width: 70%;
+        height: 38vh;
+        top: 22vh;
+    }
+    .skill h2 {
+        padding: 5%;
+    }
 }

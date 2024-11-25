@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     const contact = document.getElementById('contact')
-    const contactA = contact.getBoundingClientRect().top  - 450; 
+    const contactA = contact.getBoundingClientRect().top  - 520; 
     document.addEventListener('scroll', () => {
         if (window.scrollY > contactA) {
             button_up.style.backgroundColor = '#363338';
@@ -127,6 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         aboutMe.style.opacity = 1;
     }, 1300);
+
+
+    const menu = document.getElementById('menu');
+    const menuNavegacion = document.getElementById('menuNavegacion');
+    menu.addEventListener('click', () => {
+        if (menuNavegacion.style.display === 'block') {
+            menuNavegacion.style.display = 'none';
+        }else {
+            menuNavegacion.style.display = 'block';
+        }
+    });
+    window.addEventListener('click', (e) => {
+        if (!menu.contains(e.target)) {
+            menuNavegacion.style.display = 'none';
+        }
+    });
 });
 
 // Efecto maquina de escribir
@@ -146,7 +162,33 @@ function type() {
             }
         }
 }
-const text2 = '.......................................................................................................................................................'
+
+let text2 = "";
+
+function checkScreenSize() {
+    const mobileDots = ".".repeat(30);
+    const desktopDots = ".".repeat(150);
+    const tabletDots = ".".repeat(35);
+    
+    try {
+        if (window.innerWidth < 768) {
+            text2 = mobileDots;
+        } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+            text2 = tabletDots;
+        } else {
+            text2 = desktopDots;
+        }
+    } catch (error) {
+        console.error("Error updating text based on screen size:", error);
+    }
+}
+
+window.addEventListener('resize', checkScreenSize);
+
+checkScreenSize();
+
+
+checkScreenSize();
 let index2 = 0
 function type2() {
     if (index2 < text2.length) {
