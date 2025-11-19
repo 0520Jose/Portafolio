@@ -186,7 +186,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    background-image: url(./assets/images/fondo.jpeg);
+    background-image: url(/assets/images/fondo.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     top: 10vh;
