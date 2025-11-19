@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Animaciones de entrada
     const i = document.getElementById('i');
     const down = document.getElementById('down');
     const aboutMe = document.getElementById('aboutMe');
@@ -168,13 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const cv = document.getElementById('cv');
     if (cv) {
         cv.addEventListener('click', () => {
-            // Aquí puedes agregar la funcionalidad para descargar el CV
-            // Por ejemplo:
-            // window.open('ruta/a/tu/cv.pdf', '_blank');
         });
     }
 
-    // Menú hamburguesa
     const menu = document.getElementById('menu');
     const menuNavegacion = document.getElementById('menuNavegacion');
     
@@ -196,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Efecto máquina de escribir
 const text = `if (sad() === true) { 
     sad().stop(); 
     beAwesome(); 
@@ -219,20 +213,12 @@ function type() {
 let text2 = "";
 
 function checkScreenSize() {
-    const mobileDots = ".".repeat(30);
-    const desktopDots = ".".repeat(150);
-    const tabletDots = ".".repeat(35);
-    
-    try {
-        if (window.innerWidth < 768) {
-            text2 = mobileDots;
-        } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
-            text2 = tabletDots;
-        } else {
-            text2 = desktopDots;
-        }
-    } catch (error) {
-        console.error("Error updating text based on screen size:", error);
+    if (window.innerWidth < 768) {
+        text2 = ".".repeat(30);
+    } else if (window.innerWidth < 1024) {
+        text2 = ".".repeat(35);
+    } else {
+        text2 = ".".repeat(148);
     }
 }
 

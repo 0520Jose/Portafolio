@@ -1,465 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/styles.css">
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-        <link rel="icon" type="image/png" href="./assets/images/code.png">
-        <title>Emanuel Monzón | Developer</title>
-    </head>
-    <body>
-        <header id="header">
-            <div class="contenedor_logo">
-                <h1>Emanuel Monzón</h1>
-                <figure class="figure"><img src="./assets/images/code.png" alt=""></figure>
-            </div>
-            <div class="contMenu">
-                <button class="menu" id="menu">
-                    <ion-icon class="icono-barras" name="menu-outline"></ion-icon>
-                </button>
-                <ul id="menuNavegacion">
-                    <li><a href="#aboutme" class="link">About me</a></li>
-                    <li><a href="#skills" class="link">Skills</a></li>
-                    <li><a href="#projects" class="link">Projects</a></li>
-                    <li><a href="#contact" class="link">Contact</a></li>
-                </ul>
-            </div>
-            <nav>
-                <ul class="barraNavegacion">
-                    <li><a href="#aboutme" class="link">About me</a></li>
-                    <li><a href="#skills" class="link">Skills</a></li>
-                    <li><a href="#projects" class="link">Projects</a></li>
-                    <li><a href="#contact" class="link">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div id="aboutme"></div>
-        <div class="button_up" id="button_up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-                <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
-            </svg>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" type="image/png" href="./assets/images/code.png">
+    <title>Emanuel Monzón | Developer</title>
+</head>
+<body>
+    <header id="header">
+        <div class="contenedor_logo">
+            <h1>Emanuel Monzón</h1>
+            <figure class="figure"><img src="./assets/images/code.png" alt="Logo"></figure>
         </div>
-        <section id="decoration">
-            <div class="decoration">
-                <img src="./assets/images/figure.png" alt="figure" class="down" id="down">
-                <img src="./assets/images/yo.png" alt="yo" class="i" id="i">
+        <div class="contMenu">
+            <button class="menu" id="menu">
+                <ion-icon class="icono-barras" name="menu-outline"></ion-icon>
+            </button>
+            <ul id="menuNavegacion">
+                <li><a href="#aboutme" class="link">About me</a></li>
+                <li><a href="#skills" class="link">Skills</a></li>
+                <li><a href="#projects" class="link">Projects</a></li>
+                <li><a href="#contact" class="link">Contact</a></li>
+            </ul>
+        </div>
+        <nav>
+            <ul class="barraNavegacion">
+                <li><a href="#aboutme" class="link">About me</a></li>
+                <li><a href="#skills" class="link">Skills</a></li>
+                <li><a href="#projects" class="link">Projects</a></li>
+                <li><a href="#contact" class="link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="aboutme"></div>
+    
+    <div class="button_up" id="button_up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+        </svg>
+    </div>
+    
+    <section id="decoration">
+        <div class="decoration">
+            <img src="./assets/images/figure.png" alt="figure" class="down" id="down">
+            <img src="./assets/images/yo.png" alt="Emanuel Monzón" class="i" id="i">
+        </div>
+        <div class="aboutMe" id="aboutMe">
+            <div class="greet">
+                <div>Hello word!, I'm </div>
+                <div class="name">Emanuel Monzón</div>
             </div>
-            <div class="aboutMe" id="aboutMe">
-                <div class="greet">
-                    <div>Hello word!, I'm </div>
-                    <div class="name">Emanuel Monzón</div>
+            <p><b>Junior Developer</b></p>
+            <p>
+                I'm a Systems Engineering student at the University of San Carlos of Guatemala, passionate about web development. I'm currently learning and honing my skills in HTML, CSS, JavaScript, React, and other technologies. In fact, I'm part of a growing group of independent developers.
+            </p>
+            <button class="button" id="cv">
+                Download CV
+            </button>
+            <div class="frase">
+                <p class="frase_">// life motto</p>
+                <p id="typing"></p>
+                <span id="cursor">|</span>
+            </div>
+        </div>
+    </section>
+    
+    <div class="projects" id="projects">
+        <div class="figure" id="figure"><img src="./assets/images/code2.png" alt="Code"></div>
+        <h1>Projects</h1>
+        <div class="project">
+            <div class="project1">
+                <div class="line"></div>
+                <div class="img_proyect">
+                    <img src="./assets/images/project1.png" alt="Project 1">
                 </div>
-                <p><b>Junior Developer</b></p>
-                <p>
-                    I'm a Systems Engineering student at the University of San Carlos of Guatemala, passionate about web development. I'm currently learning and honing my skills in HTML, CSS, JavaScript, React, and other technologies. In fact, I'm part of a growing group of independent developers.
-                </p>
-                <button class="button" id="cv">
-                    Download CV
-                </button>
-                <div class="frase">
-                    <p class="frase_">// life motto</p>
-                    <p id="typing"></p>
-                    <span id="cursor">|</span>
+                <h2>Project 1</h2>
+                <p>Description of project 1.</p>
+                <div class="boton">
+                    <a class="button2" href="https://github.com/0520Jose" target="_blank">View on GitHub</a>
                 </div>
             </div>
-        </section>
-        <div class="projects" id="projects">
-            <div class="figure" id="figure"><img src="./assets/images/code2.png" alt="Code"></div>
-            <h1>Projects</h1>
-            <div class="project">
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
+            <div class="project1">
+                <div class="line"></div>
+                <div class="img_proyect">
+                    <img src="./assets/images/project2.png" alt="Project 2">
                 </div>
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
+                <h2>Project 2</h2>
+                <p>Description of project 2.</p>
+                <div class="boton">
+                    <a class="button2" href="https://github.com/0520Jose" target="_blank">View on GitHub</a>
                 </div>
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
+            </div>
+            <div class="project1">
+                <div class="line"></div>
+                <div class="img_proyect">
+                    <img src="./assets/images/project3.png" alt="Project 3">
                 </div>
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project1">
-                    <div class="line"></div>
-                    <div class="img_proyect">
-                        <img src="./assets/images/.png" alt="">
-                    </div>
-                    <h2></h2>
-                    <p>
-                    </p>
-                    <div class="boton">
-                        <a class="button2" href="" target="_blank">View on GitHub</a>
-                    </div>
+                <h2>Project 3</h2>
+                <p>Description of project 3.</p>
+                <div class="boton">
+                    <a class="button2" href="https://github.com/0520Jose" target="_blank">View on GitHub</a>
                 </div>
             </div>
         </div>
-        <div class="skills" id="skills">
-            <h1>Skills</h1>
-<div class="skill">
-    <button type="button" id="showMore1">
-        <img src="https://cdn.simpleicons.org/html5" class="icon-img" alt="HTML5">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement1">
-        <button type="button" id="hidden1">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/html5" alt="HTML5">
-            HTML5
-        </h2>
-        <p class="info">I have a medium level of proficiency in HTML5. And I'm currently learning more about it. I can create an organized structure for a website with HTML5.</p>
     </div>
+    
+    <div class="skills" id="skills">
+        <h1>Skills</h1>
+        <div class="skill">
+            <button type="button" id="showMore1">
+                <img src="https://cdn.simpleicons.org/html5" class="icon-img" alt="HTML5">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement1">
+                <button type="button" id="hidden1">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/html5" alt="HTML5">
+                    HTML5
+                </h2>
+                <p class="info">I have a medium level of proficiency in HTML5. And I'm currently learning more about it. I can create an organized structure for a website with HTML5.</p>
+            </div>
 
-    <button type="button" id="showMore2">
-        <img src="https://api.iconify.design/logos:css-3.svg" class="icon-img" alt="CSS3">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement2">
-        <button type="button" id="hidden2">✕</button>
-        <h2>
-            <img src="https://api.iconify.design/logos:css-3.svg" alt="CSS3">
-            CSS3
-        </h2>
-        <p class="info">I have a medium level of proficiency in CSS3. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore2">
+                <img src="https://api.iconify.design/logos:css-3.svg" class="icon-img" alt="CSS3">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement2">
+                <button type="button" id="hidden2">✕</button>
+                <h2>
+                    <img src="https://api.iconify.design/logos:css-3.svg" alt="CSS3">
+                    CSS3
+                </h2>
+                <p class="info">I have a medium level of proficiency in CSS3. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore3">
-        <img src="https://cdn.simpleicons.org/javascript" class="icon-img" alt="JavaScript">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement3">
-        <button type="button" id="hidden3">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
-            JavaScript
-        </h2>
-        <p class="info">I have a medium level of proficiency in JavaScript. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore3">
+                <img src="https://cdn.simpleicons.org/javascript" class="icon-img" alt="JavaScript">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement3">
+                <button type="button" id="hidden3">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
+                    JavaScript
+                </h2>
+                <p class="info">I have a medium level of proficiency in JavaScript. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore4">
-        <img src="https://cdn.simpleicons.org/react" class="icon-img" alt="React">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement4">
-        <button type="button" id="hidden4">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/react" alt="React">
-            React
-        </h2>
-        <p class="info">I have a basic level of proficiency in React. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore4">
+                <img src="https://cdn.simpleicons.org/react" class="icon-img" alt="React">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement4">
+                <button type="button" id="hidden4">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/react" alt="React">
+                    React
+                </h2>
+                <p class="info">I have a basic level of proficiency in React. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore5">
-        <img src="https://cdn.simpleicons.org/python" class="icon-img" alt="Python">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement5">
-        <button type="button" id="hidden5">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/python" alt="Python">
-            Python
-        </h2>
-        <p class="info">I have a medium level of proficiency in Python. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore5">
+                <img src="https://cdn.simpleicons.org/python" class="icon-img" alt="Python">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement5">
+                <button type="button" id="hidden5">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/python" alt="Python">
+                    Python
+                </h2>
+                <p class="info">I have a medium level of proficiency in Python. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore6">
-        <img src="https://cdn.simpleicons.org/github" class="icon-img" alt="GitHub">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement6">
-        <button type="button" id="hidden6">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/github" alt="GitHub">
-            GitHub
-        </h2>
-        <p class="info">I have a basic level of proficiency in GitHub. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore6">
+                <img src="https://cdn.simpleicons.org/github" class="icon-img" alt="GitHub">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement6">
+                <button type="button" id="hidden6">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/github" alt="GitHub">
+                    GitHub
+                </h2>
+                <p class="info">I have a basic level of proficiency in GitHub. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore7">
-        <img src="https://cdn.simpleicons.org/git" class="icon-img" alt="Git">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement7">
-        <button type="button" id="hidden7">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/git" alt="Git">
-            Git
-        </h2>
-        <p class="info">I have a basic level of proficiency in Git. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore7">
+                <img src="https://cdn.simpleicons.org/git" class="icon-img" alt="Git">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement7">
+                <button type="button" id="hidden7">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/git" alt="Git">
+                    Git
+                </h2>
+                <p class="info">I have a basic level of proficiency in Git. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore8">
-        <img src="https://api.iconify.design/logos:java.svg" class="icon-img" alt="Java">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement8">
-        <button type="button" id="hidden8">✕</button>
-        <h2>
-            <img src="https://api.iconify.design/logos:java.svg" alt="Java">
-            Java
-        </h2>
-        <p class="info">I have a basic level of proficiency in Java. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore8">
+                <img src="https://api.iconify.design/logos:java.svg" class="icon-img" alt="Java">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement8">
+                <button type="button" id="hidden8">✕</button>
+                <h2>
+                    <img src="https://api.iconify.design/logos:java.svg" alt="Java">
+                    Java
+                </h2>
+                <p class="info">I have a basic level of proficiency in Java. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore9">
-        <img src="https://api.iconify.design/logos:go.svg" class="icon-img" alt="Go">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement9">
-        <button type="button" id="hidden9">✕</button>
-        <h2>
-            <img src="https://api.iconify.design/logos:go.svg" alt="Go">
-            Go
-        </h2>
-        <p class="info">I have a basic level of proficiency in Go. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore9">
+                <img src="https://api.iconify.design/logos:go.svg" class="icon-img" alt="Go">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement9">
+                <button type="button" id="hidden9">✕</button>
+                <h2>
+                    <img src="https://api.iconify.design/logos:go.svg" alt="Go">
+                    Go
+                </h2>
+                <p class="info">I have a basic level of proficiency in Go. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore10">
-        <img src="https://api.iconify.design/logos:c.svg" class="icon-img" alt="C">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement10">
-        <button type="button" id="hidden10">✕</button>
-        <h2>
-            <img src="https://api.iconify.design/logos:c.svg" alt="C">
-            C
-        </h2>
-        <p class="info">I have a basic level of proficiency in C. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore10">
+                <img src="https://api.iconify.design/logos:c.svg" class="icon-img" alt="C">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement10">
+                <button type="button" id="hidden10">✕</button>
+                <h2>
+                    <img src="https://api.iconify.design/logos:c.svg" alt="C">
+                    C
+                </h2>
+                <p class="info">I have a basic level of proficiency in C. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore11">
-        <img src="https://api.iconify.design/logos:c-sharp.svg" class="icon-img" alt="C#">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement11">
-        <button type="button" id="hidden11">✕</button>
-        <h2>
-            <img src="https://api.iconify.design/logos:c-sharp.svg" alt="C#">
-            C#
-        </h2>
-        <p class="info">I have a basic level of proficiency in C#. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore11">
+                <img src="https://api.iconify.design/logos:c-sharp.svg" class="icon-img" alt="C#">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement11">
+                <button type="button" id="hidden11">✕</button>
+                <h2>
+                    <img src="https://api.iconify.design/logos:c-sharp.svg" alt="C#">
+                    C#
+                </h2>
+                <p class="info">I have a basic level of proficiency in C#. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore12">
-        <img src="https://cdn.simpleicons.org/dart" class="icon-img" alt="Dart">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement12">
-        <button type="button" id="hidden12">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/dart" alt="Dart">
-            Dart
-        </h2>
-        <p class="info">I have a basic level of proficiency in Dart. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore12">
+                <img src="https://cdn.simpleicons.org/dart" class="icon-img" alt="Dart">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement12">
+                <button type="button" id="hidden12">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/dart" alt="Dart">
+                    Dart
+                </h2>
+                <p class="info">I have a basic level of proficiency in Dart. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore13">
-        <img src="https://cdn.simpleicons.org/linux" class="icon-img" alt="Linux">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement13">
-        <button type="button" id="hidden13">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/linux" alt="Linux">
-            Linux
-        </h2>
-        <p class="info">I have a basic level of proficiency in Linux. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore13">
+                <img src="https://cdn.simpleicons.org/linux" class="icon-img" alt="Linux">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement13">
+                <button type="button" id="hidden13">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/linux" alt="Linux">
+                    Linux
+                </h2>
+                <p class="info">I have a basic level of proficiency in Linux. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore14">
-        <img src="https://unpkg.com/ionicons@5.5.2/dist/svg/hardware-chip-outline.svg" class="icon-img" alt="IoT">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement14">
-        <button type="button" id="hidden14">✕</button>
-        <h2>
-            <img src="https://unpkg.com/ionicons@5.5.2/dist/svg/hardware-chip-outline.svg" alt="IoT">
-            IoT
-        </h2>
-        <p class="info">I have a basic level of proficiency in Internet of Things. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore14">
+                <img src="https://unpkg.com/ionicons@5.5.2/dist/svg/hardware-chip-outline.svg" class="icon-img" alt="IoT">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement14">
+                <button type="button" id="hidden14">✕</button>
+                <h2>
+                    <img src="https://unpkg.com/ionicons@5.5.2/dist/svg/hardware-chip-outline.svg" alt="IoT">
+                    IoT
+                </h2>
+                <p class="info">I have a basic level of proficiency in Internet of Things. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore15">
-        <img src="https://api.iconify.design/logos:aws.svg" class="icon-img" alt="AWS">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement15">
-        <button type="button" id="hidden15">✕</button>
-        <h2>
-            <img src="https://api.iconify.design/logos:aws.svg" alt="AWS">
-            AWS
-        </h2>
-        <p class="info">I have a basic level of proficiency in AWS. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore15">
+                <img src="https://api.iconify.design/logos:aws.svg" class="icon-img" alt="AWS">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement15">
+                <button type="button" id="hidden15">✕</button>
+                <h2>
+                    <img src="https://api.iconify.design/logos:aws.svg" alt="AWS">
+                    AWS
+                </h2>
+                <p class="info">I have a basic level of proficiency in AWS. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore16">
-        <img src="https://cdn.simpleicons.org/obsidian" class="icon-img" alt="Obsidian">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement16">
-        <button type="button" id="hidden16">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/obsidian" alt="Obsidian">
-            Obsidian
-        </h2>
-        <p class="info">I have a basic level of proficiency in Obsidian. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore16">
+                <img src="https://cdn.simpleicons.org/obsidian" class="icon-img" alt="Obsidian">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement16">
+                <button type="button" id="hidden16">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/obsidian" alt="Obsidian">
+                    Obsidian
+                </h2>
+                <p class="info">I have a basic level of proficiency in Obsidian. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore17">
-        <img src="https://cdn.simpleicons.org/arm" class="icon-img" alt="ARM">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement17">
-        <button type="button" id="hidden17">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/arm" alt="ARM">
-            ARM64
-        </h2>
-        <p class="info">I have a basic level of proficiency in ARM64 architecture. And I'm currently learning more about it.</p>
-    </div>
+            <button type="button" id="showMore17">
+                <img src="https://cdn.simpleicons.org/arm" class="icon-img" alt="ARM">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement17">
+                <button type="button" id="hidden17">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/arm" alt="ARM">
+                    ARM64
+                </h2>
+                <p class="info">I have a basic level of proficiency in ARM64 architecture. And I'm currently learning more about it.</p>
+            </div>
 
-    <button type="button" id="showMore18">
-        <img src="https://cdn.simpleicons.org/netlify" class="icon-img" alt="Netlify">
-        <p class="view">View more</p>
-    </button>
-    <div id="hiddenElement18">
-        <button type="button" id="hidden18">✕</button>
-        <h2>
-            <img src="https://cdn.simpleicons.org/netlify" alt="Netlify">
-            Netlify
-        </h2>
-        <p class="info">I have a basic level of proficiency in Netlify. And I'm currently learning more about it.</p>
-    </div>
-</div>
-            <div class="run">
-                <p id="run">.</p>
-                <img src="./assets/images/dino.png" alt="Dino" id="dino">
+            <button type="button" id="showMore18">
+                <img src="https://cdn.simpleicons.org/netlify" class="icon-img" alt="Netlify">
+                <p class="view">View more</p>
+            </button>
+            <div id="hiddenElement18">
+                <button type="button" id="hidden18">✕</button>
+                <h2>
+                    <img src="https://cdn.simpleicons.org/netlify" alt="Netlify">
+                    Netlify
+                </h2>
+                <p class="info">I have a basic level of proficiency in Netlify. And I'm currently learning more about it.</p>
             </div>
         </div>
-        <div class="contact" id="contact">
-            <div>
-                <h1>Contact</h1>
-                <div class="icons">
-                    <a href="mailto:emanuelmonzon360@gmail.com" target="_blank"><ion-icon name="mail-outline" class="icon"></ion-icon></a>
-                    <a href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237/" target="_blank"><ion-icon name="logo-linkedin" class="icon"></ion-icon></a>
-                    <a href="https://github.com/0520Jose" target="_blank"><ion-icon name="logo-github" class="icon"></ion-icon></a>
-                    <a href="tel:+50242752670"><ion-icon name="call-outline" class="icon"></ion-icon></a>
-                </div>
-                <div class="contact-form">
-                    <h1>Contact form</h1>
-                    <form action="https://formspree.io/f/xbljyvql" method="POST">
-                        <label for="name">Name of company or person<p> *</p></label>
-                        <input type="text" name="name" placeholder="Name of company or person" required>
-                        <label for="email">Your email<p> *</p></label>
-                        <input type="email" name="email" placeholder="Company email" required>
-                        <label for="position">Position<p> *</p></label>
-                        <input type="text" name="position" placeholder="Position offered" required>
-                        <label for="message">Your message<p> *</p></label>
-                        <textarea name="message" placeholder="Tell me about the job opportunity" required></textarea>
-                        <button type="submit" class="button">Send Message</button>
-                    </form>
-                </div>
+        <div class="run">
+            <p id="run">.</p>
+            <img src="./assets/images/dino.png" alt="Dino" id="dino">
+        </div>
+    </div>
+    
+    <div class="contact" id="contact">
+        <div>
+            <h1>Contact</h1>
+            <div class="icons">
+                <a href="mailto:emanuelmonzon360@gmail.com" target="_blank"><ion-icon name="mail-outline" class="icon"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237/" target="_blank"><ion-icon name="logo-linkedin" class="icon"></ion-icon></a>
+                <a href="https://github.com/0520Jose" target="_blank"><ion-icon name="logo-github" class="icon"></ion-icon></a>
+                <a href="tel:+50242752670"><ion-icon name="call-outline" class="icon"></ion-icon></a>
+            </div>
+            <div class="contact-form">
+                <h1>Contact form</h1>
+                <form action="https://formspree.io/f/xbljyvql" method="POST">
+                    <label for="name">Name of company or person<p> *</p></label>
+                    <input type="text" name="name" placeholder="Name of company or person" required>
+                    <label for="email">Your email<p> *</p></label>
+                    <input type="email" name="email" placeholder="Company email" required>
+                    <label for="position">Position<p> *</p></label>
+                    <input type="text" name="position" placeholder="Position offered" required>
+                    <label for="message">Your message<p> *</p></label>
+                    <textarea name="message" placeholder="Tell me about the job opportunity" required></textarea>
+                    <button type="submit" class="button">Send Message</button>
+                </form>
             </div>
         </div>
-        <footer>
-            <p>© 2025 Emanuel Monzón. All rights reserved.</p>
-        </footer>
-        <script src="./js/main.js"></script>
-        <script
-        type="module"
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
-        nomodule
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-        ></script>
-    </body>
+    </div>
+    
+    <footer>
+        <p>© 2025 Emanuel Monzón. All rights reserved.</p>
+    </footer>
+    
+    <script src="./js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
 </html>

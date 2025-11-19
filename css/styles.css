@@ -1,4 +1,3 @@
-/*Global styles*/
 * {
     margin: 0;
     border: 0;
@@ -16,7 +15,6 @@ body {
     overflow-x: hidden;
 }
 
-/*Header styles*/
 header {
     width: 100%;
     height: 10vh;
@@ -137,7 +135,6 @@ nav ul li:hover a {
     transform: scale(1.05);
 }
 
-/*Button up styles*/
 .button_up {
     width: 50px;
     height: 50px;
@@ -179,7 +176,6 @@ nav ul li:hover a {
     opacity: 0;
 }
 
-/*Section styles*/
 section {
     width: 100%;
     height: 90vh;
@@ -318,11 +314,10 @@ section::before {
     animation: blink 1s step-end infinite;
 }
 
-/* Projects styles */
 .projects {
     width: 100%;
     height: fit-content;
-    background-image: url(./assets/images/fondo_code2.png);
+    background-image: url(/assets/images/fondo_code2.png);
     background-size: cover;
     background-repeat: no-repeat;
     color: #363338;
@@ -457,11 +452,10 @@ section::before {
     border: #2082e3 solid 2px;
 }
 
-/* Skills styles */
 .skills {
     width: 100%;
     height: fit-content;
-    background-image: url(./assets/images/fondo_code.jpg);
+    background-image: url(/assets/images/fondo_code.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: #fdfefe;
@@ -663,7 +657,6 @@ section::before {
     animation: animado 1s linear infinite;
 }
 
-/* Contact styles */
 .contact {
     width: 100%;
     height: fit-content;
@@ -768,7 +761,6 @@ section::before {
     border: #363338 2px solid;
 }
 
-/* Footer styles */
 footer {
     width: 100%;
     height: 10vh;
@@ -781,7 +773,6 @@ footer {
     position: relative;
 }
 
-/* Animations */
 @keyframes blink {
     0%, 100% {
         opacity: 1;
@@ -815,7 +806,6 @@ footer {
     }
 }
 
-/* Responsive styles */
 @media screen and (max-width: 1200px) {
     .skills, .contact {
         padding-left: 10%;
@@ -836,7 +826,6 @@ footer {
     }
 }
 
-/* Tablets y Laptops Pequeñas */
 @media screen and (max-width: 992px) {
     section {
         height: auto;
@@ -869,7 +858,6 @@ footer {
     }
 }
 
-/* Tablets y Móviles Grandes */
 @media screen and (max-width: 768px) {
     header {
         padding: 0 20px;
@@ -972,7 +960,6 @@ footer {
     }
 }
 
-/* Móviles */
 @media screen and (max-width: 480px) {
     .contenedor_logo h1 {
         font-size: 18px;
@@ -981,21 +968,51 @@ footer {
     .frase {
         font-size: 16px;
         margin-left: 0;
-        text-align: center;
+        justify-content: left;
         padding: 10px;
+        height: 15vh;
+    }
+
+    #typing {
+        width: 100%;
+        text-align: left;
+    }
+
+    section {
+        height: 95vh;
+    }
+
+    section::before {
+        top: 0;
     }
 
     .decoration {
-        height: 30vh;
-    }
-    
-    .aboutMe {
-        padding-top: 0;
+        height: auto;
     }
     
     .name {
         display: block;
         width: 100%;
+    }
+
+    .skills {
+        top: 9vh;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills h1 {
+        font-size: 36px;
+        width: 100%;
+    }
+
+    .contact {
+        top: 3vh;
+    }
+
+    .projects {
+        top: 9vh;
     }
 
     .skill button {
@@ -1038,6 +1055,12 @@ footer {
         width: 45px;
         height: 45px;
         opacity: 0.8;
+        box-sizing: border-box;
+        padding-left: 6px;
+    }
+
+    #figure {
+        bottom: 1vh;
     }
     
     footer p {
@@ -1045,7 +1068,6 @@ footer {
     }
 }
 
-/* Pantallas muy pequeñas */
 @media screen and (max-width: 320px) {
     .skill button {
         width: 100%;
