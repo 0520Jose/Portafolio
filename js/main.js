@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     let lastScrollY = window.scrollY;
+    const header = document.getElementById('header');
     document.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
 
@@ -93,108 +94,126 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const button_up = document.getElementById('button_up');
-const header = document.getElementById('header');
-const contact = document.getElementById('contact');
+    const contact = document.getElementById('contact');
 
-document.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY;
+    document.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY;
 
-    if (scrollPos > 100) {
-        button_up.style.opacity = '1';
-    } else {
-        button_up.style.opacity = '0';
-    }
+        if (scrollPos > 100) {
+            button_up.style.opacity = '1';
+        } else {
+            button_up.style.opacity = '0';
+        }
 
-    if (scrollPos > 0) {
-        header.style.position = 'fixed';
-    } else {
-        header.style.position = 'absolute';
-    }
+        if (scrollPos > 0) {
+            header.style.position = 'fixed';
+        } else {
+            header.style.position = 'absolute';
+        }
 
-    
-    const contactTop = contact.offsetTop - 700;
-    const contactBottom = contact.offsetTop + contact.offsetHeight;
+        const contactTop = contact.offsetTop - 700;
+        const contactBottom = contact.offsetTop + contact.offsetHeight;
 
-    if (scrollPos > contactTop && scrollPos < contactBottom) {
-        button_up.style.backgroundColor = '#363338';
-        button_up.style.color = '#2082e3';
-        button_up.style.border = '2px solid #363338';
-    } else {
-        button_up.style.backgroundColor = '#2082e3';
-        button_up.style.color = '#363338';
-        button_up.style.border = '2px solid #2082e3';
-    }
-});
-
-    setTimeout(() => {
-        i.style.transform = 'translateY(0)';
-        down.style.transform = 'translateY(0)';
-    }, 300);
-
-    setTimeout(() => {
-        i.style.opacity = 0.25;
-        down.style.opacity = 0.25;
-    }, 500);
-
-    setTimeout(() => {
-        i.style.opacity = 0.5;
-        down.style.opacity = 0.5;
-    }, 700);
-
-    setTimeout(() => {
-        i.style.opacity = 0.75;
-        down.style.opacity = 0.75;
-    }, 900);
-
-    setTimeout(() => {
-        i.style.opacity = 1;
-        down.style.opacity = 1;
-    }, 1100);
-
-    setTimeout(() => {
-        aboutMe.style.transform = 'translateY(0)';
-    }, 1300);
-
-    setTimeout(() => {
-        aboutMe.style.opacity = 1;
-    }, 1300);
-
-    cv.addEventListener('click', () => {
-        
+        if (scrollPos > contactTop && scrollPos < contactBottom) {
+            button_up.style.backgroundColor = '#363338';
+            button_up.style.color = '#2082e3';
+            button_up.style.border = '2px solid #363338';
+        } else {
+            button_up.style.backgroundColor = '#2082e3';
+            button_up.style.color = '#363338';
+            button_up.style.border = '2px solid #2082e3';
+        }
     });
 
+    // Animaciones de entrada
+    const i = document.getElementById('i');
+    const down = document.getElementById('down');
+    const aboutMe = document.getElementById('aboutMe');
+    
+    if (i && down && aboutMe) {
+        setTimeout(() => {
+            i.style.transform = 'translateY(0)';
+            down.style.transform = 'translateY(0)';
+        }, 300);
+
+        setTimeout(() => {
+            i.style.opacity = 0.25;
+            down.style.opacity = 0.25;
+        }, 500);
+
+        setTimeout(() => {
+            i.style.opacity = 0.5;
+            down.style.opacity = 0.5;
+        }, 700);
+
+        setTimeout(() => {
+            i.style.opacity = 0.75;
+            down.style.opacity = 0.75;
+        }, 900);
+
+        setTimeout(() => {
+            i.style.opacity = 1;
+            down.style.opacity = 1;
+        }, 1100);
+
+        setTimeout(() => {
+            aboutMe.style.transform = 'translateY(0)';
+        }, 1300);
+
+        setTimeout(() => {
+            aboutMe.style.opacity = 1;
+        }, 1300);
+    }
+
+    const cv = document.getElementById('cv');
+    if (cv) {
+        cv.addEventListener('click', () => {
+            // Aquí puedes agregar la funcionalidad para descargar el CV
+            // Por ejemplo:
+            // window.open('ruta/a/tu/cv.pdf', '_blank');
+        });
+    }
+
+    // Menú hamburguesa
     const menu = document.getElementById('menu');
     const menuNavegacion = document.getElementById('menuNavegacion');
-    menu.addEventListener('click', () => {
-        if (menuNavegacion.style.display === 'block') {
-            menuNavegacion.style.display = 'none';
-        }else {
-            menuNavegacion.style.display = 'block';
-        }
-    });
-    window.addEventListener('click', (e) => {
-        if (!menu.contains(e.target)) {
-            menuNavegacion.style.display = 'none';
-        }
-    });
+    
+    if (menu && menuNavegacion) {
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (menuNavegacion.style.display === 'block') {
+                menuNavegacion.style.display = 'none';
+            } else {
+                menuNavegacion.style.display = 'block';
+            }
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !menuNavegacion.contains(e.target)) {
+                menuNavegacion.style.display = 'none';
+            }
+        });
+    }
 });
 
-// Efecto maquina de escribir
+// Efecto máquina de escribir
 const text = `if (sad() === true) { 
     sad().stop(); 
     beAwesome(); 
 }   `;
 let index = 0;
 function type() {
-        if (index < text.length) {
-            setTimeout(type, 200);
-            document.getElementById('typing').innerHTML += text.charAt(index);
-            index++;
-            if (index === text.length) {
-                document.getElementById('typing').innerHTML = '';
-                index = 0;
-            }
-        }
+    if (index < text.length) {
+        document.getElementById('typing').innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 200);
+    } else {
+        setTimeout(() => {
+            document.getElementById('typing').innerHTML = '';
+            index = 0;
+            setTimeout(type, 1000);
+        }, 2000);
+    }
 }
 
 let text2 = "";
@@ -218,23 +237,23 @@ function checkScreenSize() {
 }
 
 window.addEventListener('resize', checkScreenSize);
-
 checkScreenSize();
 
-
-checkScreenSize();
-let index2 = 0
+let index2 = 0;
 function type2() {
     if (index2 < text2.length) {
-        document.getElementById('run').innerHTML += text2.charAt(index);
+        document.getElementById('run').innerHTML += text2.charAt(index2);
         index2++;
-        setTimeout(type2, 100)
-        if (index2 + 1 === text2.length) {
+        setTimeout(type2, 100);
+    } else {
+        setTimeout(() => {
             document.getElementById('run').innerHTML = '';
             index2 = 0;
-        }
-    } 
+            setTimeout(type2, 1000);
+        }, 1000);
+    }
 }
+
 window.onload = () => {
     setTimeout(type, 2500);
     setTimeout(type2, 1000);

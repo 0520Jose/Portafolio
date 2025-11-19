@@ -22,8 +22,7 @@ header {
     height: 10vh;
     display: flex;
     position: fixed;
-    padding-left: 8vh;
-    padding-right: 3vh;
+    padding: 0 3vh;
     top: 0;
     justify-content: space-between;
     align-items: center;
@@ -58,6 +57,45 @@ header {
 
 .contMenu {
     display: none;
+    position: relative;
+}
+
+#menu {
+    background: none;
+    border: none;
+    color: #fdfefe;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menuNavegacion {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #363338;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+#menuNavegacion li {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+#menuNavegacion li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fdfefe;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#menuNavegacion li a:hover {
+    background-color: #2082e3;
+    color: #363338;
 }
 
 nav {
@@ -100,7 +138,6 @@ nav ul li:hover a {
 }
 
 /*Button up styles*/
-
 .button_up {
     width: 50px;
     height: 50px;
@@ -119,6 +156,7 @@ nav ul li:hover a {
     border-radius: 100%;
     padding: .60%;
     transition: all .5s ease-in-out;
+    cursor: pointer;
 }
 
 .button_up svg {
@@ -142,14 +180,13 @@ nav ul li:hover a {
 }
 
 /*Section styles*/
-
 section {
     width: 100%;
     height: 90vh;
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    background-image: url(/assets/images/fondo.jpeg);
+    background-image: url(./assets/images/fondo.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     top: 10vh;
@@ -189,14 +226,14 @@ section::before {
 }
 
 #i {
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(-600px);
     z-index: 1;
     opacity: 0;
 }
 
 #down {
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(600px);
     z-index: 1;
     opacity: 0;
@@ -211,7 +248,7 @@ section::before {
 }
 
 #aboutMe {
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateX(600px);
     z-index: 1;
     opacity: 0;
@@ -247,6 +284,7 @@ section::before {
     border: #fdfefe solid 2px;
     background-color: #fdfefe00;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -281,11 +319,10 @@ section::before {
 }
 
 /* Projects styles */
-
 .projects {
     width: 100%;
     height: fit-content;
-    background-image: url(/assets/images/fondo_code2.png);
+    background-image: url(./assets/images/fondo_code2.png);
     background-size: cover;
     background-repeat: no-repeat;
     color: #363338;
@@ -421,11 +458,10 @@ section::before {
 }
 
 /* Skills styles */
-
 .skills {
     width: 100%;
     height: fit-content;
-    background-image: url(/assets/images/fondo_code.jpg);
+    background-image: url(./assets/images/fondo_code.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: #fdfefe;
@@ -474,6 +510,7 @@ section::before {
     width: 33.33%;
     margin-bottom: 5%;
     background-color: #fdfefe00;
+    cursor: pointer;
 }
 
 .skill img {
@@ -550,6 +587,7 @@ section::before {
     right: 8%;
     top: 5%;
     transition: all 0.5s ease-in-out; 
+    cursor: pointer;
 }
 
 #hidden1:hover, #hidden2:hover, #hidden3:hover, #hidden4:hover, #hidden5:hover, 
@@ -626,7 +664,6 @@ section::before {
 }
 
 /* Contact styles */
-
 .contact {
     width: 100%;
     height: fit-content;
@@ -732,7 +769,6 @@ section::before {
 }
 
 /* Footer styles */
-
 footer {
     width: 100%;
     height: 10vh;
@@ -746,7 +782,6 @@ footer {
 }
 
 /* Animations */
-
 @keyframes blink {
     0%, 100% {
         opacity: 1;
@@ -781,31 +816,30 @@ footer {
 }
 
 /* Responsive styles */
-
 @media screen and (max-width: 1200px) {
     .skills, .contact {
-        padding-left: 10%; /* Reducimos el padding gigante de escritorio */
+        padding-left: 10%;
         padding-right: 10%;
     }
     .contenedor_logo {
         width: 35%;
     }
     .project1 {
-        width: 45%; /* Proyectos en 2 columnas */
+        width: 45%;
     }
     #hiddenElement1, #hiddenElement2, #hiddenElement3, #hiddenElement4, #hiddenElement5, 
     #hiddenElement6, #hiddenElement7, #hiddenElement8, #hiddenElement9,
     #hiddenElement10, #hiddenElement11, #hiddenElement12, #hiddenElement13, #hiddenElement14, 
     #hiddenElement15, #hiddenElement16, #hiddenElement17, #hiddenElement18 {
-        width: 60%; /* Ajustar ancho del popup */
-        left: -50%; /* Ajustar posición inicial oculta */
+        width: 60%;
+        left: -50%;
     }
 }
 
-/* 2. Tablets en Vertical (iPad) y Laptops Pequeñas (max-width: 992px) */
+/* Tablets y Laptops Pequeñas */
 @media screen and (max-width: 992px) {
     section {
-        height: auto; /* Quitar altura fija para evitar cortes de contenido */
+        height: auto;
         padding-bottom: 50px;
     }
     
@@ -819,7 +853,6 @@ footer {
         margin: 0 auto;
     }
 
-    /* Ajustar menú para que no se rompa */
     nav ul li a {
         font-size: 14px;
     }
@@ -836,20 +869,19 @@ footer {
     }
 }
 
-/* 3. Tablets Pequeñas y Móviles Grandes (max-width: 768px) - PUNTO DE QUIEBRE PRINCIPAL */
+/* Tablets y Móviles Grandes */
 @media screen and (max-width: 768px) {
-    /* Header: Activar menú hamburguesa */
     header {
         padding: 0 20px;
         height: 80px;
     }
     
     nav {
-        display: none; /* Ocultar menú desktop */
+        display: none;
     }
     
     .contMenu {
-        display: block; /* Mostrar hamburguesa */
+        display: block;
         width: auto;
     }
 
@@ -857,10 +889,10 @@ footer {
         width: 70%;
     }
 
-    /* Hero Section: Columna Inversa */
     section {
         flex-direction: column-reverse;
-        top: 80px; /* Ajuste por altura de header */
+        top: 80px;
+        height: auto;
     }
 
     .aboutMe {
@@ -874,23 +906,22 @@ footer {
     }
 
     .button {
-        margin: 20px auto; /* Centrar botón */
+        margin: 20px auto;
+        width: 50%;
     }
 
-    /* Animación de imágenes Hero */
     .decoration {
         height: 40vh;
         margin-top: 20px;
     }
     
     #i, #down {
-        width: 50%; /* Hacer imágenes más pequeñas */
+        width: 50%;
         margin: 0 auto;
         left: 0; 
         right: 0;
     }
 
-    /* Proyectos: Una sola columna */
     .projects {
         padding: 5%;
     }
@@ -901,33 +932,30 @@ footer {
     
     .project1 {
         width: 100%;
-        height: auto; /* Altura automática para leer todo el texto */
+        height: auto;
         margin-bottom: 40px;
     }
 
-    /* Skills: Iconos más grandes para tocar */
     .skill {
         width: 100%;
         justify-content: space-around;
     }
 
     .skill button {
-        width: 30%; /* 3 iconos por fila */
+        width: 30%;
     }
 
-    /* Popups de Skills: Centrados y Anchos */
     [id^="hiddenElement"] {
-        width: 90% !important; /* Forzar ancho */
-        left: 5% !important; /* Centrar (5% margen izq) */
+        width: 90% !important;
+        left: 5% !important;
         height: auto;
         min-height: 300px;
         padding: 20px;
-        border: 1px solid #2082e3; /* Borde para resaltar sobre fondo */
-        background-color: #363338; /* Fondo sólido para legibilidad */
-        z-index: 100; /* Asegurar que quede encima */
+        border: 1px solid #2082e3;
+        background-color: #363338;
+        z-index: 100;
     }
 
-    /* Contacto */
     .contact {
         padding: 5%;
         margin-top: 50px;
@@ -937,11 +965,15 @@ footer {
         width: 100%;
         text-align: center;
     }
+    
+    .contact-form {
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
-/* 4. Móviles (max-width: 480px) - OPTIMIZACIÓN PARA CELULAR */
+/* Móviles */
 @media screen and (max-width: 480px) {
-    /* Textos más legibles */
     .contenedor_logo h1 {
         font-size: 18px;
     }
@@ -953,9 +985,8 @@ footer {
         padding: 10px;
     }
 
-    /* Hero Ajustes */
     .decoration {
-        height: 30vh; /* Menos altura para imagen */
+        height: 30vh;
     }
     
     .aboutMe {
@@ -963,26 +994,24 @@ footer {
     }
     
     .name {
-        display: block; /* Nombre debajo de "Hello word" si no cabe */
+        display: block;
         width: 100%;
     }
 
-    /* Skills Grid en Móvil */
     .skill button {
-        width: 45%; /* 2 iconos por fila para facilitar el toque */
+        width: 45%;
         margin-bottom: 15px;
     }
     
     .skill img, .skill ion-icon, .icon_svg {
-        width: 50px; /* Iconos tamaño dedo */
+        width: 50px;
         font-size: 50px;
     }
 
-    /* Popups en móvil */
     [id^="hiddenElement"] {
         width: 96% !important;
         left: 2% !important;
-        top: 100px; /* Forzar un poco hacia abajo */
+        top: 100px;
         padding: 15px;
     }
     
@@ -994,39 +1023,36 @@ footer {
         font-size: 14px;
     }
 
-    /* Formulario más cómodo */
     .contact-form input, .contact-form textarea {
-        padding: 15px; /* Área de toque más grande */
-        font-size: 16px; /* Evita zoom automático en iPhone */
+        padding: 15px;
+        font-size: 16px;
     }
     
     .contact-form h1 {
         font-size: 24px;
     }
 
-    /* Botón Subir */
     .button_up {
         bottom: 15px;
         right: 15px;
         width: 45px;
         height: 45px;
-        opacity: 0.8; /* Ligeramente transparente para no tapar contenido */
+        opacity: 0.8;
     }
     
-    /* Footer */
     footer p {
         font-size: 12px;
     }
 }
 
-/* 5. Pantallas muy pequeñas (Galaxy Fold cerrado / iPhone SE viejo) */
+/* Pantallas muy pequeñas */
 @media screen and (max-width: 320px) {
     .skill button {
-        width: 100%; /* 1 icono por fila */
+        width: 100%;
     }
     
     .contenedor_logo h1 {
-        display: none; /* Ocultar nombre, dejar solo logo */
+        display: none;
     }
     
     .figure {
