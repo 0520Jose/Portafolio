@@ -1,0 +1,47 @@
+{
+  "nav": ["Chi sono", "Progetti", "Competenze", "Contatti"],
+  "hireMe": "Assumimi",
+  "available": "Disponibile per nuove opportunità",
+  "heroTitle1": "Costruisco",
+  "heroTitle2": "esperienze digitali",
+  "heroTitle3": "ad alte prestazioni.",
+  "heroDesc1": "Sono un",
+  "heroDesc2": "Ingegnere di Sistema",
+  "heroDesc3": "e sviluppatore focalizzato sulla creazione di applicazioni web estetiche e funzionali.",
+  "explore": "Esplora i Progetti",
+  "projectsTitle": "Progetti in Evidenza",
+  "projectsDesc": "Una selezione dei miei migliori lavori, con un focus su prestazioni e usabilità.",
+  "viewAll": "Vedi Tutti",
+  "skillsTitle": "Arsenale Tecnico",
+  "skillsDesc": "Esperienza full-stack, con focus su standard web moderni e architetture ad alte prestazioni.",
+  "contactTitle1": "Costruiamo",
+  "contactTitle2": "qualcosa di",
+  "contactTitle3": "leggendario.",
+  "contactDesc": "Hai un progetto in mente o vuoi fare due chiacchiere? Scrivimi.",
+  "email": "E-mail",
+  "whatsapp": "Whatsapp",
+  "nameLabel": "Nome",
+  "typeLabel": "Tipo di Progetto",
+  "emailLabel": "Indirizzo E-mail",
+  "msgLabel": "Messaggio",
+  "send": "Invia Messaggio",
+  "rights": "Tutti i diritti riservati.",
+  "placeName": "Il tuo nome",
+  "placeType": "Landing page, negozio, dashboard...",
+  "placeEmail": "tuaemail@dominio.com",
+  "placeMsg": "Dimmi di cosa hai bisogno.",
+  "projectsData": [
+    {
+      "title": "Dashboard di Finanza Decentralizzata",
+      "desc": "Un'elegante piattaforma analitica per criptovalute con streaming di dati in tempo reale."
+    },
+    {
+      "title": "Portfolio Interattivo",
+      "desc": "Un portfolio personale progettato per evidenziare progetti, competenze e dettagli di contatto."
+    },
+    {
+      "title": "Piattaforma di Supply Chain Globale",
+      "desc": "Tracker logistico di livello aziendale con mappatura complessa e algoritmi di consegna predittivi."
+    }
+  ]
+}

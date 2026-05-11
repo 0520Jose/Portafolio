@@ -1,0 +1,47 @@
+{
+  "nav": ["Über mich", "Projekte", "Fähigkeiten", "Kontakt"],
+  "hireMe": "Mich Einstellen",
+  "available": "Verfügbar für neue Möglichkeiten",
+  "heroTitle1": "Ich baue",
+  "heroTitle2": "hochleistungsfähige",
+  "heroTitle3": "digitale Erlebnisse.",
+  "heroDesc1": "Ich bin",
+  "heroDesc2": "Systemingenieur",
+  "heroDesc3": "und Entwickler mit Fokus auf ästhetische Webanwendungen. Komplexe Probleme in einfache Lösungen verwandeln.",
+  "explore": "Projekte Erkunden",
+  "projectsTitle": "Ausgewählte Projekte",
+  "projectsDesc": "Eine Auswahl meiner besten Arbeiten mit Fokus auf Leistung, Skalierbarkeit und Benutzererfahrung.",
+  "viewAll": "Alle Ansehen",
+  "skillsTitle": "Technisches Arsenal",
+  "skillsDesc": "Full-Stack-Expertise mit Fokus auf moderne Webstandards und Hochleistungsarchitekturen.",
+  "contactTitle1": "Lass uns",
+  "contactTitle2": "etwas",
+  "contactTitle3": "Legendäres bauen.",
+  "contactDesc": "Hast du ein Projekt im Kopf oder möchtest du einfach nur plaudern? Schreib mir eine Nachricht.",
+  "email": "E-Mail",
+  "whatsapp": "Whatsapp",
+  "nameLabel": "Name",
+  "typeLabel": "Projekttyp",
+  "emailLabel": "E-Mail Adresse",
+  "msgLabel": "Nachricht",
+  "send": "Nachricht Senden",
+  "rights": "Alle Rechte vorbehalten.",
+  "placeName": "Dein Name",
+  "placeType": "Landingpage, Shop, Dashboard...",
+  "placeEmail": "deinemail@domain.com",
+  "placeMsg": "Erzähl mir, was du brauchst.",
+  "projectsData": [
+    {
+      "title": "Dezentrales Finanz-Dashboard",
+      "desc": "Eine elegante, informationsdichte Analyseplattform für Krypto-Assets mit Echtzeit-Daten-Streaming."
+    },
+    {
+      "title": "Interaktives Portfolio",
+      "desc": "Ein poliertes persönliches Portfolio-Erlebnis, das Projekte, Fähigkeiten und Kontaktdaten hervorhebt."
+    },
+    {
+      "title": "Globale Lieferkettenplattform",
+      "desc": "Logistik-Tracker auf Unternehmensebene mit komplexen Kartierungs- und prädiktiven Lieferalgorithmen."
+    }
+  ]
+}
