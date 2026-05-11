@@ -1,0 +1,47 @@
+{
+  "nav": ["À propos", "Projets", "Compétences", "Contact"],
+  "hireMe": "Engagez-moi",
+  "available": "Disponible pour de nouvelles opportunités",
+  "heroTitle1": "Je crée des",
+  "heroTitle2": "expériences numériques",
+  "heroTitle3": "haute performance.",
+  "heroDesc1": "Je suis",
+  "heroDesc2": "Ingénieur Système",
+  "heroDesc3": "et développeur axé sur la création d'applications web soignées et esthétiques. Je transforme des problèmes complexes en solutions simples.",
+  "explore": "Explorer les Projets",
+  "projectsTitle": "Projets en Vedette",
+  "projectsDesc": "Une sélection de mes meilleurs travaux, axée sur la performance, l'évolutivité et l'expérience utilisateur.",
+  "viewAll": "Voir Tout",
+  "skillsTitle": "Arsenal Technique",
+  "skillsDesc": "Expertise full-stack, avec un accent sur les standards web modernes et les architectures haute performance.",
+  "contactTitle1": "Construisons",
+  "contactTitle2": "quelque chose de",
+  "contactTitle3": "légendaire.",
+  "contactDesc": "Vous avez un projet en tête ou vous voulez simplement discuter ? Envoyez-moi un message.",
+  "email": "E-mail",
+  "whatsapp": "Whatsapp",
+  "nameLabel": "Nom",
+  "typeLabel": "Type de Projet",
+  "emailLabel": "Adresse E-mail",
+  "msgLabel": "Message",
+  "send": "Envoyer le Message",
+  "rights": "Tous droits réservés.",
+  "placeName": "Votre nom",
+  "placeType": "Landing page, boutique, tableau de bord...",
+  "placeEmail": "votreemail@domaine.com",
+  "placeMsg": "Dites-moi ce dont vous avez besoin.",
+  "projectsData": [
+    {
+      "title": "Tableau de Bord de Finance Décentralisée",
+      "desc": "Une plateforme analytique élégante pour les crypto-actifs avec diffusion de données en temps réel."
+    },
+    {
+      "title": "Portfolio Interactif",
+      "desc": "Une expérience de portfolio personnel soignée conçue pour mettre en valeur les projets, les compétences et les contacts."
+    },
+    {
+      "title": "Plateforme de Chaîne d'Approvisionnement",
+      "desc": "Suivi logistique d'entreprise avec cartographie complexe et algorithmes de livraison prédictifs."
+    }
+  ]
+}

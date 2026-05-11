@@ -1,0 +1,47 @@
+{
+    "nav": ["Sobre mí", "Proyectos", "Habilidades", "Contacto"],
+    "hireMe": "Contrátame",
+    "available": "Disponible para nuevas oportunidades",
+    "heroTitle1": "Construyo",
+    "heroTitle2": "experiencias digitales",
+    "heroTitle3": "de alto rendimiento.",
+    "heroDesc1": "Soy",
+    "heroDesc2": "Ingeniero en Sistemas",
+    "heroDesc3": "y desarrollador enfocado en crear aplicaciones web pulidas, funcionales y estéticas. Transformando problemas complejos en soluciones simples.",
+    "explore": "Explorar Proyectos",
+    "projectsTitle": "Proyectos Destacados",
+    "projectsDesc": "Una selección de mi mejor trabajo, enfocada en rendimiento, escalabilidad y experiencia de usuario.",
+    "viewAll": "Ver todo",
+    "skillsTitle": "Arsenal Técnico",
+    "skillsDesc": "Experiencia en todo el stack, con un enfoque en estándares web modernos y arquitecturas de alto rendimiento.",
+    "contactTitle1": "Construyamos",
+    "contactTitle2": "algo",
+    "contactTitle3": "legendario.",
+    "contactDesc": "¿Tienes un proyecto en mente o solo quieres charlar? Envíame un mensaje y convirtamos tu visión en una realidad.",
+    "email": "Correo",
+    "whatsapp": "Whatsapp",
+    "nameLabel": "Nombre",
+    "typeLabel": "Tipo de Proyecto",
+    "emailLabel": "Correo Electrónico",
+    "msgLabel": "Mensaje",
+    "send": "Enviar Mensaje",
+    "rights": "Todos los derechos reservados.",
+    "placeName": "Tu nombre",
+    "placeType": "Landing page, tienda, dashboard...",
+    "placeEmail": "tuemail@correo.com",
+    "placeMsg": "Cuéntame qué necesitas para tu portafolio o proyecto.",
+    "projectsData": [
+        {
+        "title": "Dashboard de Finanzas Descentralizadas",
+        "desc": "Una plataforma analítica elegante y densa en información para criptoactivos con transmisión de datos en tiempo real."
+        },
+        {
+        "title": "Portafolio Interactivo",
+        "desc": "Una experiencia de portafolio personal pulida diseñada para destacar proyectos, habilidades y contacto con una fuerte jerarquía visual."
+        },
+        {
+        "title": "Plataforma de Cadena de Suministro Global",
+        "desc": "Rastreador logístico de grado empresarial con mapeo complejo y algoritmos predictivos de entrega."
+        }
+    ]
+}

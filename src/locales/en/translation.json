@@ -1,0 +1,47 @@
+{
+    "nav": ["About", "Projects", "Skills", "Contact"],
+    "hireMe": "Hire Me",
+    "available": "Available for new opportunities",
+    "heroTitle1": "I build",
+    "heroTitle2": "high-performance",
+    "heroTitle3": "digital experiences.",
+    "heroDesc1": "I'm a",
+    "heroDesc2": "Systems Engineer",
+    "heroDesc3": "and developer focused on building polished, functional, and aesthetic web applications. Transforming complex problems into simple, beautiful solutions.",
+    "explore": "Explore Projects",
+    "projectsTitle": "Featured Projects",
+    "projectsDesc": "A selection of my best work, focusing on performance, scalability, and user experience.",
+    "viewAll": "View All Work",
+    "skillsTitle": "Technical Arsenal",
+    "skillsDesc": "Expertise across the full stack, with a focus on modern web standards and high-performance architectures.",
+    "contactTitle1": "Let's build",
+    "contactTitle2": "something",
+    "contactTitle3": "legendary.",
+    "contactDesc": "Have a project in mind or just want to chat? Drop me a message and let's turn your vision into a high-performance reality.",
+    "email": "Email",
+    "whatsapp": "Whatsapp",
+    "nameLabel": "Name",
+    "typeLabel": "Project Type",
+    "emailLabel": "Email Address",
+    "msgLabel": "Message",
+    "send": "Send Message",
+    "rights": "All rights reserved.",
+    "placeName": "Your name",
+    "placeType": "Landing page, store, dashboard...",
+    "placeEmail": "youremail@domain.com",
+    "placeMsg": "Tell me what you need for your portfolio or project.",
+    "projectsData": [
+        {
+        "title": "Decentralized Finance Dashboard",
+        "desc": "A sleek, information-dense analytics platform for crypto assets with real-time data streaming."
+        },
+        {
+        "title": "Interactive Portfolio Showcase",
+        "desc": "A polished personal portfolio experience designed to highlight projects, skills, and contact details with strong visual hierarchy."
+        },
+        {
+        "title": "Global Supply Chain Platform",
+        "desc": "Enterprise-grade logistics tracker with complex mapping and predictive delivery algorithms."
+        }
+    ]
+}

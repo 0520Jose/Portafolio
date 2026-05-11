@@ -1,0 +1,47 @@
+{
+  "nav": ["Sobre", "Projetos", "Habilidades", "Contato"],
+  "hireMe": "Contrate-me",
+  "available": "Disponível para novas oportunidades",
+  "heroTitle1": "Eu construo",
+  "heroTitle2": "experiências digitais",
+  "heroTitle3": "de alta performance.",
+  "heroDesc1": "Sou",
+  "heroDesc2": "Engenheiro de Sistemas",
+  "heroDesc3": "e desenvolvedor focado em criar aplicações web polidas e estéticas. Transformando problemas complexos em soluções simples.",
+  "explore": "Explorar Projetos",
+  "projectsTitle": "Projetos em Destaque",
+  "projectsDesc": "Uma seleção do meu melhor trabalho, com foco em desempenho, escalabilidade e experiência do usuário.",
+  "viewAll": "Ver Todos",
+  "skillsTitle": "Arsenal Técnico",
+  "skillsDesc": "Experiência full-stack, com foco em padrões web modernos e arquiteturas de alta performance.",
+  "contactTitle1": "Vamos construir",
+  "contactTitle2": "algo",
+  "contactTitle3": "lendário.",
+  "contactDesc": "Tem um projeto em mente ou quer apenas bater um papo? Me envie uma mensagem.",
+  "email": "E-mail",
+  "whatsapp": "Whatsapp",
+  "nameLabel": "Nome",
+  "typeLabel": "Tipo de Projeto",
+  "emailLabel": "Endereço de E-mail",
+  "msgLabel": "Mensagem",
+  "send": "Enviar Mensagem",
+  "rights": "Todos os direitos reservados.",
+  "placeName": "Seu nome",
+  "placeType": "Landing page, loja, dashboard...",
+  "placeEmail": "seuemail@dominio.com",
+  "placeMsg": "Me conte o que você precisa.",
+  "projectsData": [
+    {
+      "title": "Painel de Finanças Descentralizadas",
+      "desc": "Uma plataforma analítica elegante para criptoativos com streaming de dados em tempo real."
+    },
+    {
+      "title": "Portfólio Interativo",
+      "desc": "Uma experiência de portfólio pessoal projetada para destacar projetos, habilidades e detalhes de contato."
+    },
+    {
+      "title": "Plataforma Global de Cadeia de Suprimentos",
+      "desc": "Rastreador logístico de nível corporativo com mapeamento complexo e algoritmos de entrega preditivos."
+    }
+  ]
+}

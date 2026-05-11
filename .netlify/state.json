@@ -1,0 +1,14 @@
+{
+	"geolocation": {
+		"data": {
+			"country": {
+				"code": "GT",
+				"name": "Guatemala"
+			},
+			"timezone": "America/Guatemala",
+			"latitude": 15.4974,
+			"longitude": -90.2525
+		},
+		"timestamp": 1763569319221
+	}
+}
