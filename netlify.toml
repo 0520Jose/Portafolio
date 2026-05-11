@@ -1,9 +1,10 @@
 [build]
+  install = "npm install --include=dev --include=optional --no-audit --no-fund --no-package-lock"
   command = "npm run build"
   publish = "dist"
   
 [build.environment]
-  NPM_CONFIG_BUILD_FROM_SOURCE = "true"
+  NODE_VERSION = "20"
 
 [[redirects]]
   from = "/*"
