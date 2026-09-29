@@ -1,109 +1,143 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Building2, ExternalLink, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="py-32 px-6">
+    <section id="contact" className="py-28 px-6 border-t border-border/40">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <h2 className="font-display text-5xl font-bold text-fg">
-              {t("contactTitle1")} <br />
-              {t("contactTitle2")} <span className="text-gradient">{t("contactTitle3")}</span>
-            </h2>
-            <p className="text-muted text-lg leading-relaxed">{t("contactDesc")}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Contact Info Column */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-border text-xs font-mono text-primary">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              COMMUNICATION CHANNEL
+            </div>
 
-            {/* Contact Cards */}
-            <div className="space-y-4">
-              {/* Email */}
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-card-bg border border-border w-fit">
-                <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
-                  <Mail size={20} />
+            <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-fg leading-tight">
+              {t("contactTitle1")}{" "}
+              <span className="text-primary">{t("contactTitle2")}</span>{" "}
+              {t("contactTitle3")}
+            </h2>
+
+            <p className="text-muted text-base leading-relaxed max-w-md">
+              {t("contactDesc")}
+            </p>
+
+            {/* Direct Contact Cards */}
+            <div className="space-y-3 pt-2">
+              {/* Email Card */}
+              <a
+                href="mailto:emanuelmonzon360@gmail.com"
+                className="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-border-hover transition-colors group"
+              >
+                <div className="w-10 h-10 bg-surface-hover border border-border rounded-lg flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                  <Mail size={18} />
                 </div>
-                <div>
-                  <p className="text-[10px] font-bold text-muted uppercase tracking-widest">
+                <div className="overflow-hidden">
+                  <p className="text-[10px] font-mono font-bold text-muted uppercase tracking-wider">
                     {t("email")}
                   </p>
-                  <p className="font-medium px-2 text-fg">emanuelmonzon360@gmail.com</p>
+                  <p className="font-medium text-sm text-fg truncate">emanuelmonzon360@gmail.com</p>
                 </div>
-              </div>
+              </a>
 
-              {/* WhatsApp */}
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-card-bg border border-border w-fit">
-                <div className="w-10 h-10 bg-indigo-500/20 rounded-xl flex items-center justify-center text-indigo-400">
-                  <Phone size={20} />
+              {/* Organization Card */}
+              <a
+                href="https://trebol4devop.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-border-hover transition-colors group"
+              >
+                <div className="w-10 h-10 bg-surface-hover border border-border rounded-lg flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                  <Building2 size={18} />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-muted uppercase tracking-widest">
-                    {t("whatsapp")}
+                  <p className="text-[10px] font-mono font-bold text-muted uppercase tracking-wider">
+                    {t("organization")}
                   </p>
-                  <p className="font-medium px-2 text-fg">+502 4275 2670</p>
+                  <p className="font-medium text-sm text-fg flex items-center gap-1.5">
+                    Trebol4Devop
+                    <ExternalLink size={13} className="text-muted group-hover:text-primary transition-colors" />
+                  </p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <form className="space-y-4 bento-card p-8">
-            {/* Name & Type Row */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-muted px-2 uppercase">
-                  {t("nameLabel")}
-                </label>
-                <input
-                  type="text"
-                  placeholder={t("placeName")}
-                  className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-sm text-fg focus:outline-none focus:border-primary transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-muted px-2 uppercase">
-                  {t("typeLabel")}
-                </label>
-                <input
-                  type="text"
-                  placeholder={t("placeType")}
-                  className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-sm text-fg focus:outline-none focus:border-primary transition-colors"
-                />
-              </div>
-            </div>
-
-            {/* Email */}
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-muted px-2 uppercase">
-                {t("emailLabel")}
-              </label>
-              <input
-                type="email"
-                placeholder={t("placeEmail")}
-                className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-sm text-fg focus:outline-none focus:border-primary transition-colors"
-              />
-            </div>
-
-            {/* Message */}
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-muted px-2 uppercase">
-                {t("msgLabel")}
-              </label>
-              <textarea
-                rows={4}
-                placeholder={t("placeMsg")}
-                className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-sm text-fg focus:outline-none focus:border-primary transition-colors resize-none"
-              />
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all duration-300 transform active:scale-[0.98]"
+          {/* Minimalist Contact Form Column */}
+          <div className="lg:col-span-7">
+            <form 
+              action="https://formspree.io/f/xkoknvkg" 
+              method="POST"
+              className="space-y-4 rounded-2xl border border-border bg-surface p-6 sm:p-8"
             >
-              {t("send")}
-            </button>
-          </form>
+              {/* Name & Type Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-mono font-bold text-muted uppercase tracking-wider">
+                    {t("nameLabel")}
+                  </label>
+                  <input
+                    name="name"
+                    type="text"
+                    required
+                    placeholder={t("placeName")}
+                    className="w-full bg-surface-hover border border-border rounded-xl px-4 py-3 text-sm text-fg focus:outline-none focus:border-primary transition-colors placeholder:text-muted/60"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-mono font-bold text-muted uppercase tracking-wider">
+                    {t("typeLabel")}
+                  </label>
+                  <input
+                    name="project_type"
+                    type="text"
+                    placeholder={t("placeType")}
+                    className="w-full bg-surface-hover border border-border rounded-xl px-4 py-3 text-sm text-fg focus:outline-none focus:border-primary transition-colors placeholder:text-muted/60"
+                  />
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="space-y-1.5">
+                <label className="text-[11px] font-mono font-bold text-muted uppercase tracking-wider">
+                  {t("emailLabel")}
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder={t("placeEmail")}
+                  className="w-full bg-surface-hover border border-border rounded-xl px-4 py-3 text-sm text-fg focus:outline-none focus:border-primary transition-colors placeholder:text-muted/60"
+                />
+              </div>
+
+              {/* Message */}
+              <div className="space-y-1.5">
+                <label className="text-[11px] font-mono font-bold text-muted uppercase tracking-wider">
+                  {t("msgLabel")}
+                </label>
+                <textarea
+                  name="message"
+                  rows={4}
+                  required
+                  placeholder={t("placeMsg")}
+                  className="w-full bg-surface-hover border border-border rounded-xl px-4 py-3 text-sm text-fg focus:outline-none focus:border-primary transition-colors resize-none placeholder:text-muted/60"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full py-3.5 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wider font-mono shadow-sm"
+              >
+                <span>{t("send")}</span>
+                <Send size={15} />
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
