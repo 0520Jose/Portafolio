@@ -1,5 +1,10 @@
 {
-  "nav": ["À propos", "Projets", "Compétences", "Contact"],
+  "nav": [
+    "À propos",
+    "Projets",
+    "Compétences",
+    "Contact"
+  ],
   "hireMe": "Engagez-moi",
   "available": "Disponible pour de nouvelles opportunités",
   "heroTitle1": "Je crée des",
@@ -7,19 +12,32 @@
   "heroTitle3": "haute performance.",
   "heroDesc1": "Je suis",
   "heroDesc2": "Ingénieur Système",
-  "heroDesc3": "et développeur axé sur la création d'applications web soignées et esthétiques. Je transforme des problèmes complexes en solutions simples.",
+  "heroDesc3": "et développeur axé sur les architectures évolutives, les systèmes distribués et les interfaces web à fort impact.",
   "explore": "Explorer les Projets",
+  "systemShowcase": "VITRINE DES SYSTÈMES",
   "projectsTitle": "Projets en Vedette",
-  "projectsDesc": "Une sélection de mes meilleurs travaux, axée sur la performance, l'évolutivité et l'expérience utilisateur.",
-  "viewAll": "Voir Tout",
+  "projectsDesc": "Systèmes en production, architectures de microservices et travaux d'ingénierie collaborative.",
+  "viewAll": "Voir tout sur GitHub",
+  "demo": "Démo en direct",
+  "repo": "Code source",
+  "privateCode": "Code propriétaire",
+  "coreCapabilities": "COMPÉTENCES CLÉS",
   "skillsTitle": "Arsenal Technique",
-  "skillsDesc": "Expertise full-stack, avec un accent sur les standards web modernes et les architectures haute performance.",
+  "skillsDesc": "Maîtrise du cycle de vie logiciel : de la conception d'interfaces réactives aux infrastructures cloud.",
+  "architecturePillars": "Piliers d'Architecture",
+  "architectureDesc": "Principes d'ingénierie appliqués à chaque système : scalabilité, résilience et conception découplée.",
+  "continuousStack": "Outils Continus et Stack Technologique",
+  "skillLevel": "Niveau de Maîtrise",
+  "skillLevelBasic": "Élémentaire",
+  "skillLevelMedium": "Intermédiaire",
+  "skillLevelAdvanced": "Avancé",
+  "clickTechHint": "Cliquez sur une technologie pour inspecter les détails",
   "contactTitle1": "Construisons",
   "contactTitle2": "quelque chose de",
   "contactTitle3": "légendaire.",
-  "contactDesc": "Vous avez un projet en tête ou vous voulez simplement discuter ? Envoyez-moi un message.",
+  "contactDesc": "Vous avez un projet en tête ou recherchez un profil en ingénierie des systèmes ? Contactez-moi pour créer une solution haute performance.",
   "email": "E-mail",
-  "whatsapp": "Whatsapp",
+  "organization": "Organisation",
   "nameLabel": "Nom",
   "typeLabel": "Type de Projet",
   "emailLabel": "Adresse E-mail",
@@ -27,21 +45,90 @@
   "send": "Envoyer le Message",
   "rights": "Tous droits réservés.",
   "placeName": "Votre nom",
-  "placeType": "Landing page, boutique, tableau de bord...",
+  "placeType": "Landing page, boutique, tableau de bord, API...",
   "placeEmail": "votreemail@domaine.com",
-  "placeMsg": "Dites-moi ce dont vous avez besoin.",
+  "placeMsg": "Décrivez-moi votre projet ou vos besoins...",
+  "pillarsData": [
+    {
+      "title": "Frontend et Interfaces Réactives",
+      "desc": "Architectures modulaires basées sur des composants avec React 19, TypeScript et outils de style modernes."
+    },
+    {
+      "title": "Backend et Systèmes Distribués",
+      "desc": "APIs robustes, architectures orientées événements et microservices pour environnements hautement concurrents."
+    },
+    {
+      "title": "Cloud et Infrastructure DevOps",
+      "desc": "Conteneurisation, pipelines CI/CD automatisés et déploiements optimisés sur le cloud et l'edge."
+    },
+    {
+      "title": "Persistance des Données et Caching",
+      "desc": "Bases de données relationnelles et NoSQL associées à des stratégies de cache en mémoire à très faible latence."
+    }
+  ],
   "projectsData": [
     {
-      "title": "Tableau de Bord de Finance Décentralisée",
-      "desc": "Une plateforme analytique élégante pour les crypto-actifs avec diffusion de données en temps réel."
+      "title": "Collectif Trebol4Devop",
+      "desc": "Organisation d'ingénierie logicielle, architecture distribuée et développement collaboratif à l'USAC.",
+      "category": "Écosystème & Organisation"
     },
     {
       "title": "Portfolio Interactif",
-      "desc": "Une expérience de portfolio personnel soignée conçue pour mettre en valeur les projets, les compétences et les contacts."
+      "desc": "Vitrine personnelle haute fidélité avec internationalisation en 6 langues, thèmes dynamiques et architecture modulaire.",
+      "category": "Frontend & UI/UX"
     },
     {
-      "title": "Plateforme de Chaîne d'Approvisionnement",
-      "desc": "Suivi logistique d'entreprise avec cartographie complexe et algorithmes de livraison prédictifs."
+      "title": "PEMTREE",
+      "desc": "Visualiseur interactif de programmes universitaires et gestion de cursus avec scrapers automatisés.",
+      "category": "Plateforme Académique & React"
+    },
+    {
+      "title": "Carte du Campus USAC",
+      "desc": "Plateforme géospatiale interactive pour l'orientation et la navigation sur le campus universitaire.",
+      "category": "SIG Web & Communauté"
+    },
+    {
+      "title": "Cartesian Plane Library",
+      "desc": "Moteur de rendu mathématique open source sur canvas pour le tracé graphique en coordonnées cartésiennes.",
+      "category": "Bibliothèque Open Source"
+    },
+    {
+      "title": "SAMNU",
+      "desc": "Suite logicielle complète de méthodes numériques pour les sciences et l'ingénierie avec plus de 30 algorithmes.",
+      "category": "Logiciel Propriétaire & Mathématiques"
     }
-  ]
+  ],
+  "techDescriptions": {
+    "HTML5": "Structure sémantique, accessibilité élevée et balisage web moderne.",
+    "CSS3": "Conception adaptative, systèmes visuels soignés et animations fluides.",
+    "JavaScript": "Logique dynamique pour des interfaces utilisateur interactives et performantes.",
+    "React": "Composants modulaires et applications web réactives orientées performance.",
+    "TypeScript": "Typage statique rigoureux pour un code sécurisé, testable et pérenne.",
+    "Tailwind CSS": "Système de classes utilitaires modernes pour un design rapide et cohérent.",
+    "Python": "Automatisation, scripts scientifiques et développement d'APIs robustes.",
+    "Git": "Gestion décentralisée des versions de code pour un travail rigoureux.",
+    "GitHub": "Collaboration en équipe, revues de code et automatisation CI/CD.",
+    "Java": "Programmation orientée objet appliquée à des systèmes robustes et pérennes.",
+    "Go": "Microservices concurrents et ultra-rapides pour infrastructures modernes.",
+    "C": "Maîtrise du bas niveau, gestion rigoureuse de la mémoire et algorithmique.",
+    "C#": "Développement d'applications robustes avec l'écosystème .NET moderne.",
+    "Dart": "Langage typé moderne dédié aux applications multiplateformes natives.",
+    "Linux": "Administration de serveurs, scripts shell et environnements de déploiement.",
+    "IoT": "Objets connectés, microcontrôleurs et projets matériels intelligents.",
+    "AWS": "Infrastructure cloud élastique pour le calcul, le stockage et le réseau.",
+    "Obsidian": "Base de connaissances interconnectée et documentation technique en Markdown.",
+    "ARM64": "Architecture matérielle haute efficacité énergétique pour serveurs et systèmes embarqués.",
+    "Netlify": "Déploiement git continu et hébergement mondial sur réseau de bordure.",
+    "Vite": "Outil de compilation de nouvelle génération avec rechargement instantané.",
+    "Node.js": "Environnement d'exécution JavaScript côté serveur performant et asynchrone.",
+    "Django": "Framework web complet en Python intégrant ORM et fonctionnalités de sécurité.",
+    "Flask": "Micro-framework Python minimaliste et modulaire pour microservices légers.",
+    "i18n": "Architecture d'internationalisation pour une expérience multilingue fluide.",
+    "Flutter": "Toolkit d'interface utilisateur multiplateforme native développé par Google.",
+    "Grafana": "Tableaux de bord d'analyse et observabilité des métriques système en temps réel.",
+    "MongoDB": "Base de données NoSQL orientée documents, flexible et hautement évolutive."
+  },
+  "dinoGameOver": "Fin du Jeu",
+  "dinoRestart": "Cliquer pour redémarrer",
+  "dinoPlay": "Cliquer ou Espace pour Jouer (Easter Egg)"
 }

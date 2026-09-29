@@ -1,5 +1,10 @@
 {
-  "nav": ["Chi sono", "Progetti", "Competenze", "Contatti"],
+  "nav": [
+    "Chi sono",
+    "Progetti",
+    "Competenze",
+    "Contatti"
+  ],
   "hireMe": "Assumimi",
   "available": "Disponibile per nuove opportunità",
   "heroTitle1": "Costruisco",
@@ -7,19 +12,32 @@
   "heroTitle3": "ad alte prestazioni.",
   "heroDesc1": "Sono un",
   "heroDesc2": "Ingegnere di Sistema",
-  "heroDesc3": "e sviluppatore focalizzato sulla creazione di applicazioni web estetiche e funzionali.",
+  "heroDesc3": "e sviluppatore focalizzato su architetture scalabili, sistemi distribuiti e moderne interfacce web d'impatto.",
   "explore": "Esplora i Progetti",
+  "systemShowcase": "VETRINA DEI SISTEMI",
   "projectsTitle": "Progetti in Evidenza",
-  "projectsDesc": "Una selezione dei miei migliori lavori, con un focus su prestazioni e usabilità.",
-  "viewAll": "Vedi Tutti",
+  "projectsDesc": "Sistemi in produzione, architetture a microservizi e progetti di ingegneria collaborativa.",
+  "viewAll": "Vedi tutti su GitHub",
+  "demo": "Demo dal vivo",
+  "repo": "Codice sorgente",
+  "privateCode": "Codice proprietario",
+  "coreCapabilities": "COMPETENZE PRINCIPALI",
   "skillsTitle": "Arsenale Tecnico",
-  "skillsDesc": "Esperienza full-stack, con focus su standard web moderni e architetture ad alte prestazioni.",
+  "skillsDesc": "Competenza nell'intero ciclo di vita del software: dalla progettazione di interfacce reattive all'infrastruttura cloud.",
+  "architecturePillars": "Pilastri Architetturali",
+  "architectureDesc": "Principi ingegneristici fondamentali: scalabilità, resilienza e architettura modulare disaccoppiata.",
+  "continuousStack": "Strumenti Continui e Stack Tecnologico",
+  "skillLevel": "Livello di Competenza",
+  "skillLevelBasic": "Base",
+  "skillLevelMedium": "Intermedio",
+  "skillLevelAdvanced": "Avanzato",
+  "clickTechHint": "Clicca su qualsiasi tecnologia per visualizzare i dettagli",
   "contactTitle1": "Costruiamo",
   "contactTitle2": "qualcosa di",
   "contactTitle3": "leggendario.",
-  "contactDesc": "Hai un progetto in mente o vuoi fare due chiacchiere? Scrivimi.",
+  "contactDesc": "Hai un progetto in mente o cerchi un talento di ingegneria dei sistemi? Scrivimi e creiamo una soluzione performante.",
   "email": "E-mail",
-  "whatsapp": "Whatsapp",
+  "organization": "Organizzazione",
   "nameLabel": "Nome",
   "typeLabel": "Tipo di Progetto",
   "emailLabel": "Indirizzo E-mail",
@@ -27,21 +45,90 @@
   "send": "Invia Messaggio",
   "rights": "Tutti i diritti riservati.",
   "placeName": "Il tuo nome",
-  "placeType": "Landing page, negozio, dashboard...",
+  "placeType": "Landing page, negozio, dashboard, API...",
   "placeEmail": "tuaemail@dominio.com",
-  "placeMsg": "Dimmi di cosa hai bisogno.",
+  "placeMsg": "Raccontami del tuo progetto o delle tue esigenze...",
+  "pillarsData": [
+    {
+      "title": "Frontend e UI Reattiva",
+      "desc": "Architetture modulari basate su componenti con React 19, TypeScript e moderne utilità di stile."
+    },
+    {
+      "title": "Backend e Sistemi Distribuiti",
+      "desc": "API robuste, architetture orientate agli eventi e microservizi per ambienti ad alta concorrenza."
+    },
+    {
+      "title": "Cloud e Infrastruttura DevOps",
+      "desc": "Workflow containerizzati, pipeline CI/CD automatizzate e distribuzioni edge multi-cloud."
+    },
+    {
+      "title": "Persistenza Dati e Caching",
+      "desc": "Database relazionali e documentali integrati con strategie di caching in memoria a bassissima latenza."
+    }
+  ],
   "projectsData": [
     {
-      "title": "Dashboard di Finanza Decentralizzata",
-      "desc": "Un'elegante piattaforma analitica per criptovalute con streaming di dati in tempo reale."
+      "title": "Collettivo Trebol4Devop",
+      "desc": "Organizzazione di ingegneria del software, architettura distribuita ed ecosistema collaborativo presso l'USAC.",
+      "category": "Ecosistema & Organizzazione"
     },
     {
       "title": "Portfolio Interattivo",
-      "desc": "Un portfolio personale progettato per evidenziare progetti, competenze e dettagli di contatto."
+      "desc": "Vetrina personale ad alta fedeltà con internazionalizzazione in 6 lingue, cambio tema e architettura modulare.",
+      "category": "Frontend & UI/UX"
     },
     {
-      "title": "Piattaforma di Supply Chain Globale",
-      "desc": "Tracker logistico di livello aziendale con mappatura complessa e algoritmi di consegna predittivi."
+      "title": "PEMTREE",
+      "desc": "Visualizzatore interattivo di piani di studio accademici universitari con scraper automatizzati.",
+      "category": "Piattaforma Accademica & React"
+    },
+    {
+      "title": "Mappa del Campus USAC",
+      "desc": "Piattaforma geospaziale comunitaria per orientamento e localizzazione di facoltà nel campus universitario.",
+      "category": "Web GIS & Comunità"
+    },
+    {
+      "title": "Cartesian Plane Library",
+      "desc": "Libreria matematica open source per il rendering grafico di coordinate e curve cartesiane su canvas.",
+      "category": "Libreria Open Source"
+    },
+    {
+      "title": "SAMNU",
+      "desc": "Software completo di metodi numerici per ingegneria e scienze con oltre 30 algoritmi e report PDF.",
+      "category": "Software Proprietario & Matematica"
     }
-  ]
+  ],
+  "techDescriptions": {
+    "HTML5": "Struttura semantica, elevata accessibilità e markup web scalabile.",
+    "CSS3": "Layout responsivo, sistemi di design moderni e animazioni fluide.",
+    "JavaScript": "Logica dinamica per interfacce utente ricche e reattive.",
+    "React": "Componenti modulari e Single Page Application orientate alle prestazioni.",
+    "TypeScript": "Tipizzazione statica rigorosa per basi di codice manutenibili e sicure.",
+    "Tailwind CSS": "Design rapido ed efficiente tramite classi di utilità moderne.",
+    "Python": "Scripting, automazione e sviluppo versatile di backend e analisi.",
+    "Git": "Controllo di versione distribuito per uno sviluppo ordinato e tracciabile.",
+    "GitHub": "Collaborazione in team, revisione del codice e pipeline CI/CD moderne.",
+    "Java": "Sviluppo software orientato agli oggetti per architetture aziendali robuste.",
+    "Go": "Microservizi concorrenti veloci ed efficienti per sistemi ad alto carico.",
+    "C": "Fondamenti di basso livello, gestione manuale della memoria e algoritmi.",
+    "C#": "Applicazioni scalabili nell'ecosistema moderno e produttivo di .NET.",
+    "Dart": "Linguaggio moderno tipizzato per interfacce utente multipiattaforma native.",
+    "Linux": "Amministrazione di sistemi server, scripting bash e gestione distribuzioni.",
+    "IoT": "Dispositivi connessi, microcontrollori e progetti hardware intelligenti.",
+    "AWS": "Servizi cloud elastici per calcolo, archiviazione scalabile e networking.",
+    "Obsidian": "Organizzazione della conoscenza tecnica e documentazione strutturata in Markdown.",
+    "ARM64": "Architettura di processori ad alta efficienza per server moderni e sistemi edge.",
+    "Netlify": "Distribuzione automatizzata basata su git con CDN globale edge.",
+    "Vite": "Bundler moderno e ambiente di sviluppo ultra-rapido con HMR istantaneo.",
+    "Node.js": "Runtime JavaScript lato server asincrono ad alte prestazioni.",
+    "Django": "Framework completo in Python con ORM integrato per uno sviluppo sicuro.",
+    "Flask": "Micro-framework flessibile per la creazione di API REST agili e veloci.",
+    "i18n": "Internazionalizzazione fluida per supportare mercati e lingue globali.",
+    "Flutter": "Framework UI di Google per la compilazione nativa multipiattaforma.",
+    "Grafana": "Cruscotti analitici e monitoraggio in tempo reale delle prestazioni dei sistemi.",
+    "MongoDB": "Database NoSQL orientato ai documenti, scalabile e a schema flessibile."
+  },
+  "dinoGameOver": "Fine del Gioco",
+  "dinoRestart": "Clicca per riavviare",
+  "dinoPlay": "Clicca o Spazio per Giocare (Easter Egg)"
 }
