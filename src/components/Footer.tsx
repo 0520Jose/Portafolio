@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Code2 } from "lucide-react";
+import { Github, Linkedin, Mail, Code2, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import React from "react";
 
@@ -20,10 +20,13 @@ export const Footer = () => {
         <p className="text-muted text-xs">© 2026 Emanuel Monzón. {t("rights")}</p>
 
         <div className="flex items-center gap-6">
-          <a href="https://github.com/0520Jose" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg transition-colors">
+          <a href="https://github.com/0520Jose" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg transition-colors" title="GitHub">
             <Github size={18} />
           </a>
-          <a href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg transition-colors">
+          <a href="https://trebol4devop.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-emerald-400 transition-colors" title="Trebol4Devop Organization">
+            <Globe size={18} />
+          </a>
+          <a href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg transition-colors" title="LinkedIn">
             <Linkedin size={18} />
           </a>
           <a 
@@ -31,6 +34,7 @@ export const Footer = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-muted hover:text-fg transition-colors"
+            title="Email"
           >
             <Mail size={18} />
           </a>

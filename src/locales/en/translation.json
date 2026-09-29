@@ -1,47 +1,134 @@
 {
-    "nav": ["About", "Projects", "Skills", "Contact"],
-    "hireMe": "Hire Me",
-    "available": "Available for new opportunities",
-    "heroTitle1": "I build",
-    "heroTitle2": "high-performance",
-    "heroTitle3": "digital experiences.",
-    "heroDesc1": "I'm a",
-    "heroDesc2": "Systems Engineer",
-    "heroDesc3": "and developer focused on building polished, functional, and aesthetic web applications. Transforming complex problems into simple, beautiful solutions.",
-    "explore": "Explore Projects",
-    "projectsTitle": "Featured Projects",
-    "projectsDesc": "A selection of my best work, focusing on performance, scalability, and user experience.",
-    "viewAll": "View All Work",
-    "skillsTitle": "Technical Arsenal",
-    "skillsDesc": "Expertise across the full stack, with a focus on modern web standards and high-performance architectures.",
-    "contactTitle1": "Let's build",
-    "contactTitle2": "something",
-    "contactTitle3": "legendary.",
-    "contactDesc": "Have a project in mind or just want to chat? Drop me a message and let's turn your vision into a high-performance reality.",
-    "email": "Email",
-    "whatsapp": "Whatsapp",
-    "nameLabel": "Name",
-    "typeLabel": "Project Type",
-    "emailLabel": "Email Address",
-    "msgLabel": "Message",
-    "send": "Send Message",
-    "rights": "All rights reserved.",
-    "placeName": "Your name",
-    "placeType": "Landing page, store, dashboard...",
-    "placeEmail": "youremail@domain.com",
-    "placeMsg": "Tell me what you need for your portfolio or project.",
-    "projectsData": [
-        {
-        "title": "Decentralized Finance Dashboard",
-        "desc": "A sleek, information-dense analytics platform for crypto assets with real-time data streaming."
-        },
-        {
-        "title": "Interactive Portfolio Showcase",
-        "desc": "A polished personal portfolio experience designed to highlight projects, skills, and contact details with strong visual hierarchy."
-        },
-        {
-        "title": "Global Supply Chain Platform",
-        "desc": "Enterprise-grade logistics tracker with complex mapping and predictive delivery algorithms."
-        }
-    ]
+  "nav": [
+    "About",
+    "Projects",
+    "Skills",
+    "Contact"
+  ],
+  "hireMe": "Hire Me",
+  "available": "Available for new opportunities",
+  "heroTitle1": "I build",
+  "heroTitle2": "high-performance",
+  "heroTitle3": "digital experiences.",
+  "heroDesc1": "I'm a",
+  "heroDesc2": "Systems Engineer",
+  "heroDesc3": "and developer focused on scalable architectures, distributed systems, and impactful modern web interfaces.",
+  "explore": "Explore Projects",
+  "systemShowcase": "SYSTEM SHOWCASE",
+  "projectsTitle": "Featured Projects",
+  "projectsDesc": "Production-grade systems, microservices architectures, and collaborative engineering works.",
+  "viewAll": "View all on GitHub",
+  "demo": "Live Demo",
+  "repo": "Code",
+  "privateCode": "Proprietary Code",
+  "coreCapabilities": "CORE CAPABILITIES",
+  "skillsTitle": "Technical Arsenal",
+  "skillsDesc": "Proficiency across the full software lifecycle: from reactive user interface design to cloud-native infrastructure.",
+  "architecturePillars": "Architecture Pillars",
+  "architectureDesc": "Core engineering principles applied to every system: scalability, resilience, and clean decoupled design.",
+  "continuousStack": "Continuous Tooling & Technology Stack",
+  "skillLevel": "Proficiency Level",
+  "skillLevelBasic": "Basic",
+  "skillLevelMedium": "Intermediate",
+  "skillLevelAdvanced": "Advanced",
+  "clickTechHint": "Click any technology to inspect details",
+  "contactTitle1": "Let's build",
+  "contactTitle2": "something",
+  "contactTitle3": "legendary.",
+  "contactDesc": "Have a project in mind or looking for a systems engineering talent? Drop me a message and let's craft a high-performance solution.",
+  "email": "Email",
+  "organization": "Organization",
+  "nameLabel": "Name",
+  "typeLabel": "Project Type",
+  "emailLabel": "Email Address",
+  "msgLabel": "Message",
+  "send": "Send Message",
+  "rights": "All rights reserved.",
+  "placeName": "Your name",
+  "placeType": "Landing page, store, dashboard, API...",
+  "placeEmail": "youremail@domain.com",
+  "placeMsg": "Tell me about your project or requirements...",
+  "pillarsData": [
+    {
+      "title": "Frontend & Reactive UI",
+      "desc": "Component-driven, responsive architectures built with React 19, TypeScript, and modern styling utilities."
+    },
+    {
+      "title": "Backend & Systems",
+      "desc": "Robust APIs, event-driven architectures, and microservices built for high-concurrency environments."
+    },
+    {
+      "title": "Cloud & Infrastructure",
+      "desc": "Containerized application workflows, automated CI/CD pipelines, and multi-cloud edge deployments."
+    },
+    {
+      "title": "Data Persistence & Caching",
+      "desc": "Relational and document-oriented databases paired with sub-millisecond in-memory caching strategies."
+    }
+  ],
+  "projectsData": [
+    {
+      "title": "Trebol4Devop Collective",
+      "desc": "Software engineering organization, distributed architecture, and collaborative developer ecosystem at USAC.",
+      "category": "Ecosystem & Organization"
+    },
+    {
+      "title": "Interactive Modern Portfolio",
+      "desc": "High-fidelity personal showcase featuring 6-language internationalization, theme toggling, and decoupled architecture.",
+      "category": "Frontend & UI/UX"
+    },
+    {
+      "title": "PEMTREE",
+      "desc": "Interactive academic syllabus visualizer and curriculum management platform with automated catalog scrapers.",
+      "category": "Academic Platform & React"
+    },
+    {
+      "title": "USAC Campus Map",
+      "desc": "Community geospatial interactive platform providing campus routing and faculty landmarks at USAC.",
+      "category": "Web GIS & Community"
+    },
+    {
+      "title": "Cartesian Plane Library",
+      "desc": "Open-source mathematical canvas rendering engine for coordinate plotting, curves, and algorithmic rendering.",
+      "category": "Open Source Library"
+    },
+    {
+      "title": "SAMNU",
+      "desc": "Comprehensive numerical methods suite for engineering and science with 30+ algorithms, report generation, available on web and app stores.",
+      "category": "Proprietary Software & Math Engine"
+    }
+  ],
+  "techDescriptions": {
+    "HTML5": "Semantic structure, high accessibility, and scalable web markup.",
+    "CSS3": "Responsive layout styling, clean design systems, and fluid animations.",
+    "JavaScript": "Dynamic client-side logic powering interactive web experiences.",
+    "React": "Component-based architecture and SPAs optimized for speed and reusability.",
+    "TypeScript": "Strict static typing ensuring bug resistance and maintainable codebases.",
+    "Tailwind CSS": "Rapid utility-first styling for maintainable and responsive designs.",
+    "Python": "Automation scripts, scientific tools, and reliable backend services.",
+    "Git": "Distributed version control enabling traceable and disciplined development.",
+    "GitHub": "Collaborative code reviews, repository tracking, and CI/CD pipelines.",
+    "Java": "Object-oriented software development for enterprise-grade solutions.",
+    "Go": "High-throughput concurrent microservices and efficient network computing.",
+    "C": "Low-level system fundamentals, manual memory management, and core algorithms.",
+    "C#": "Enterprise software and robust applications within the modern .NET ecosystem.",
+    "Dart": "Modern strongly typed language powering responsive multi-platform apps.",
+    "Linux": "Server administration, shell automation, and production environments.",
+    "IoT": "Connected embedded sensors, smart devices, and hardware integrations.",
+    "AWS": "Cloud infrastructure for elastic computing, object storage, and DNS.",
+    "Obsidian": "Connected technical knowledge base and Markdown-driven documentation.",
+    "ARM64": "Power-efficient processor architecture for modern edge and cloud nodes.",
+    "Netlify": "Automated git-driven deployments and global edge CDN hosting.",
+    "Vite": "Next-generation frontend tooling with instant hot module replacement.",
+    "Node.js": "Asynchronous event-driven JavaScript server runtime.",
+    "Django": "Batteries-included web framework with built-in ORM and security.",
+    "Flask": "Lightweight, flexible micro-framework for modular RESTful APIs.",
+    "i18n": "Robust internationalization architecture supporting multicultural locales.",
+    "Flutter": "Google's cross-platform UI toolkit compiled to native machine code.",
+    "Grafana": "Interactive real-time observability, telemetry dashboards, and alerting.",
+    "MongoDB": "Scalable document-oriented NoSQL database for flexible schemas."
+  },
+  "dinoGameOver": "Game Over",
+  "dinoRestart": "Click to restart",
+  "dinoPlay": "Click or Space to Play (Easter Egg)"
 }

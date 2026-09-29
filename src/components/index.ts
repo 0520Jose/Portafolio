@@ -6,3 +6,4 @@ export { Contact } from "./Contact";
 export { Footer } from "./Footer";
 export { ThemeToggle } from "./ThemeToggle";
 export { LanguageSelector } from "./LanguageSelector";
+export { SpaceInvaders } from "./SpaceInvaders";
