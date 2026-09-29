@@ -1,5 +1,10 @@
 {
-  "nav": ["Sobre", "Projetos", "Habilidades", "Contato"],
+  "nav": [
+    "Sobre",
+    "Projetos",
+    "Habilidades",
+    "Contato"
+  ],
   "hireMe": "Contrate-me",
   "available": "Disponível para novas oportunidades",
   "heroTitle1": "Eu construo",
@@ -7,19 +12,32 @@
   "heroTitle3": "de alta performance.",
   "heroDesc1": "Sou",
   "heroDesc2": "Engenheiro de Sistemas",
-  "heroDesc3": "e desenvolvedor focado em criar aplicações web polidas e estéticas. Transformando problemas complexos em soluções simples.",
+  "heroDesc3": "e desenvolvedor focado em arquiteturas escaláveis, sistemas distribuídos e interfaces web modernas de alto impacto.",
   "explore": "Explorar Projetos",
+  "systemShowcase": "VITRINE DE SISTEMAS",
   "projectsTitle": "Projetos em Destaque",
-  "projectsDesc": "Uma seleção do meu melhor trabalho, com foco em desempenho, escalabilidade e experiência do usuário.",
-  "viewAll": "Ver Todos",
+  "projectsDesc": "Sistemas em produção, arquitetura de microsserviços e projetos de engenharia colaborativa.",
+  "viewAll": "Ver todos no GitHub",
+  "demo": "Site ao vivo",
+  "repo": "Código fonte",
+  "privateCode": "Código proprietário",
+  "coreCapabilities": "COMPETÊNCIAS PRINCIPAIS",
   "skillsTitle": "Arsenal Técnico",
-  "skillsDesc": "Experiência full-stack, com foco em padrões web modernos e arquiteturas de alta performance.",
+  "skillsDesc": "Domínio de tecnologias modernas em todo o ciclo de vida: desde interfaces reativas até infraestrutura em nuvem.",
+  "architecturePillars": "Pilares de Arquitetura",
+  "architectureDesc": "Fundamentos de engenharia aplicados em cada sistema: escalabilidade, resiliência e arquitetura desacoplada.",
+  "continuousStack": "Ferramentas Contínuas e Stack Tecnológico",
+  "skillLevel": "Nível de Domínio",
+  "skillLevelBasic": "Básico",
+  "skillLevelMedium": "Intermediário",
+  "skillLevelAdvanced": "Avançado",
+  "clickTechHint": "Clique em qualquer tecnologia para inspecionar os detalhes",
   "contactTitle1": "Vamos construir",
   "contactTitle2": "algo",
   "contactTitle3": "lendário.",
-  "contactDesc": "Tem um projeto em mente ou quer apenas bater um papo? Me envie uma mensagem.",
+  "contactDesc": "Tem um projeto em mente ou busca um engenheiro de sistemas? Me envie uma mensagem e vamos criar uma solução de alto rendimento.",
   "email": "E-mail",
-  "whatsapp": "Whatsapp",
+  "organization": "Organização",
   "nameLabel": "Nome",
   "typeLabel": "Tipo de Projeto",
   "emailLabel": "Endereço de E-mail",
@@ -27,21 +45,90 @@
   "send": "Enviar Mensagem",
   "rights": "Todos os direitos reservados.",
   "placeName": "Seu nome",
-  "placeType": "Landing page, loja, dashboard...",
+  "placeType": "Landing page, loja, dashboard, API...",
   "placeEmail": "seuemail@dominio.com",
-  "placeMsg": "Me conte o que você precisa.",
+  "placeMsg": "Me conte sobre seu projeto ou requisitos...",
+  "pillarsData": [
+    {
+      "title": "Frontend e Interfaces Reativas",
+      "desc": "Arquiteturas modulares baseadas em componentes com React 19, TypeScript e utilitários modernos de estilo."
+    },
+    {
+      "title": "Backend e Sistemas Distribuídos",
+      "desc": "APIs robustas, arquiteturas orientadas a eventos e microsserviços para ambientes de alta concorrência."
+    },
+    {
+      "title": "Nuvem e Infraestrutura DevOps",
+      "desc": "Fluxos conteinerizados, pipelines automatizados de CI/CD e implantações multi-cloud edge."
+    },
+    {
+      "title": "Persistência de Dados e Caching",
+      "desc": "Bancos de dados relacionais e orientados a documentos com estratégias de cache em memória ultrarrápidas."
+    }
+  ],
   "projectsData": [
     {
-      "title": "Painel de Finanças Descentralizadas",
-      "desc": "Uma plataforma analítica elegante para criptoativos com streaming de dados em tempo real."
+      "title": "Coletivo Trebol4Devop",
+      "desc": "Organização de engenharia de software, arquitetura distribuída e desenvolvimento colaborativo na USAC.",
+      "category": "Ecossistema & Organização"
     },
     {
       "title": "Portfólio Interativo",
-      "desc": "Uma experiência de portfólio pessoal projetada para destacar projetos, habilidades e detalhes de contato."
+      "desc": "Vitrine pessoal de alta fidelidade com internacionalização em 6 idiomas, alternância de temas e arquitetura modular.",
+      "category": "Frontend & UI/UX"
     },
     {
-      "title": "Plataforma Global de Cadeia de Suprimentos",
-      "desc": "Rastreador logístico de nível corporativo com mapeamento complexo e algoritmos de entrega preditivos."
+      "title": "PEMTREE",
+      "desc": "Visualizador interativo de matrizes curriculares e gestão acadêmica universitária com scrapers automatizados.",
+      "category": "Plataforma Acadêmica & React"
+    },
+    {
+      "title": "Mapa do Campus USAC",
+      "desc": "Plataforma geoespacial interativa para orientação e localização de faculdades no campus universitário.",
+      "category": "Web GIS & Comunidade"
+    },
+    {
+      "title": "Cartesian Plane Library",
+      "desc": "Biblioteca matemática de código aberto em canvas para renderização gráfica em coordenadas cartesianas.",
+      "category": "Biblioteca Open Source"
+    },
+    {
+      "title": "SAMNU",
+      "desc": "Software abrangente de métodos numéricos para engenharia e ciências com mais de 30 algoritmos e relatórios em PDF.",
+      "category": "Software Proprietário & Matemática"
     }
-  ]
+  ],
+  "techDescriptions": {
+    "HTML5": "Estrutura semântica, alta acessibilidade e marcação moderna para web.",
+    "CSS3": "Layout responsivo, sistemas visuais limpos e animações fluidas.",
+    "JavaScript": "Lógica dinâmica para interfaces de usuário ricas e interativas.",
+    "React": "Componentes modulares e aplicações SPA orientadas a alto desempenho.",
+    "TypeScript": "Tipagem estática estrita para bases de código seguras e manuteníveis.",
+    "Tailwind CSS": "Estilização rápida e flexível através de utilitários modernos.",
+    "Python": "Automação, scripts científicos e serviços de backend altamente versáteis.",
+    "Git": "Controle de versão distribuído para desenvolvimento estruturado e rastreável.",
+    "GitHub": "Colaboração em equipe, revisão de código e automação de CI/CD.",
+    "Java": "Desenvolvimento orientado a objetos para sistemas corporativos robustos.",
+    "Go": "Microsserviços concorrentes e de alto desempenho para infraestruturas modernas.",
+    "C": "Fundamentos de baixo nível, controle manual de memória e algoritmos essenciais.",
+    "C#": "Aplicações corporativas sólidas no moderno ecossistema do .NET.",
+    "Dart": "Linguagem moderna e tipada para interfaces nativas multiplataforma.",
+    "Linux": "Administração de servidores, automação em bash e ambientes de produção.",
+    "IoT": "Dispositivos conectados, sensores embarcados e projetos de hardware inteligente.",
+    "AWS": "Serviços em nuvem para computação elástica, armazenamento e redes.",
+    "Obsidian": "Gestão de conhecimento interconectado e documentação técnica em Markdown.",
+    "ARM64": "Arquitetura com alta eficiência energética para servidores modernos e edge.",
+    "Netlify": "Implantações contínuas orientadas a git com CDN distribuída globalmente.",
+    "Vite": "Ferramenta de empacotamento moderna de inicialização instantânea.",
+    "Node.js": "Ambiente assíncrono de execução de JavaScript no lado do servidor.",
+    "Django": "Framework web completo em Python com ORM integrado e segurança sólida.",
+    "Flask": "Microframework leve e modular para desenvolvimento ágil de APIs.",
+    "i18n": "Arquitetura de internacionalização completa para suporte multilíngue.",
+    "Flutter": "Framework do Google para compilação nativa em web, mobile e desktop.",
+    "Grafana": "Painéis interativos em tempo real para observabilidade e telemetria de sistemas.",
+    "MongoDB": "Banco de dados NoSQL orientado a documentos com escalabilidade horizontal."
+  },
+  "dinoGameOver": "Fim de Jogo",
+  "dinoRestart": "Clique para reiniciar",
+  "dinoPlay": "Clique ou Espaço para Jogar (Easter Egg)"
 }

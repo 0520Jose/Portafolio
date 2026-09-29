@@ -38,7 +38,7 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-            <Code2 className="text-white" size={24} />
+            <Code2 className="text-white" size={22} />
           </div>
           <span className="font-display font-bold text-xl tracking-tight text-fg">
             Emanuel M.
@@ -63,7 +63,7 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
 
           <a
             href="#contact"
-            className="px-5 py-2.5 bg-fg text-bg rounded-full text-xs font-bold hover:bg-primary hover:text-white transition-all duration-300"
+            className="px-5 py-2.5 bg-fg text-bg rounded-xl text-xs font-bold hover:bg-primary hover:text-white transition-all duration-200"
           >
             {t("hireMe")}
           </a>

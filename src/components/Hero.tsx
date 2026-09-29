@@ -1,133 +1,166 @@
 import { motion } from "motion/react";
-import { ExternalLink, Code2, Github, Linkedin, Mail, Rocket } from "lucide-react";
+import { ExternalLink, Github, Linkedin, Mail, Globe, Terminal, Activity } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { SpaceInvaders } from "./SpaceInvaders";
 
 export const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="about" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      <div className="pixel-grid absolute inset-0 z-0" />
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 blur-[120px] rounded-full" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-500/10 blur-[120px] rounded-full" />
+    <section id="about" className="relative min-h-screen flex flex-col justify-center pt-28 pb-16 px-6 overflow-hidden">
+      {/* Blueprint Grid Texture */}
+      <div className="pixel-grid absolute inset-0 z-0 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6 max-w-4xl"
-        >
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card-bg border border-border text-primary-light text-xs font-mono mb-4">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            {t("available")}
-          </div>
-
-          {/* Main Title */}
-          <h1 className="font-display text-6xl md:text-8xl font-bold leading-[0.9] tracking-tight text-fg">
-            {t("heroTitle1")} <span className="text-gradient">{t("heroTitle2")}</span>{" "}
-            {t("heroTitle3")}
-          </h1>
-
-          {/* Description */}
-          <p className="text-muted text-lg md:text-xl max-w-2xl leading-relaxed">
-            {t("heroDesc1")} <span className="text-fg font-medium">{t("heroDesc2")}</span>{" "}
-            {t("heroDesc3")}
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-primary-dark transition-all duration-300 flex items-center gap-2"
-            >
-              {t("explore")} <ExternalLink size={18} />
-            </a>
-            <div className="flex items-center gap-3 px-4 py-2 border border-border rounded-2xl bg-card-bg backdrop-blur-sm">
-              <a href="https://github.com/0520Jose" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="mailto:emanuelmonzon360@gmail.com" className="text-muted hover:text-fg transition-colors">
-                <Mail size={20} />
-              </a>
+      <div className="max-w-7xl mx-auto w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+          {/* Main Typography Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="lg:col-span-7 space-y-6"
+          >
+            {/* Live Status Pill */}
+            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-border bg-surface text-fg text-xs font-mono">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              <span className="tracking-wide">{t("available")}</span>
             </div>
-          </div>
-        </motion.div>
-      </div>
 
-      {/* Code Window Illustration */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        className="hidden lg:block absolute right-[-5%] top-1/2 -translate-y-1/2"
-      >
-        <div className="relative">
-          <div className="w-[500px] h-[500px] bg-gradient-to-br from-primary/30 to-indigo-500/20 rounded-3xl rotate-12 border border-border backdrop-blur-sm -z-10 absolute inset-0" />
-          <div className="w-[500px] h-[500px] bg-surface rounded-3xl border border-border shadow-2xl p-8 flex flex-col justify-between">
-            {/* Window Header */}
-            <div className="flex items-center justify-between border-b border-border pb-4">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                <div className="w-3 h-3 rounded-full bg-green-500/50" />
+            {/* Monumental Headline with Space Grotesk */}
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-fg leading-[0.95]">
+              {t("heroTitle1")}{" "}
+              <span className="text-primary underline decoration-primary/30 underline-offset-8">
+                {t("heroTitle2")}
+              </span>{" "}
+              {t("heroTitle3")}
+            </h1>
+
+            {/* Description */}
+            <p className="text-muted text-base sm:text-lg md:text-xl max-w-xl leading-relaxed">
+              {t("heroDesc1")} <span className="text-fg font-medium">{t("heroDesc2")}</span>{" "}
+              {t("heroDesc3")}
+            </p>
+
+            {/* Call to Actions */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href="#projects"
+                className="px-6 py-3.5 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all duration-200 flex items-center gap-2 text-sm shadow-sm"
+              >
+                {t("explore")} <ExternalLink size={16} />
+              </a>
+
+              <div className="flex items-center gap-3 px-4 py-2 border border-border rounded-xl bg-surface">
+                <a
+                  href="https://github.com/0520Jose"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted hover:text-fg transition-colors p-1"
+                  title="GitHub"
+                >
+                  <Github size={18} />
+                </a>
+                <a
+                  href="https://trebol4devop.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted hover:text-primary transition-colors p-1"
+                  title="Trebol4Devop Organization"
+                >
+                  <Globe size={18} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted hover:text-fg transition-colors p-1"
+                  title="LinkedIn"
+                >
+                  <Linkedin size={18} />
+                </a>
+                <a
+                  href="mailto:emanuelmonzon360@gmail.com"
+                  className="text-muted hover:text-fg transition-colors p-1"
+                  title="Email"
+                >
+                  <Mail size={18} />
+                </a>
               </div>
-              <span className="text-xs font-mono text-muted">amanuel.ts — 428 loc</span>
             </div>
+          </motion.div>
 
-            {/* Code Content */}
-            <div className="font-mono text-sm space-y-2 py-6 text-muted">
-              <p>
-                <span className="text-indigo-400">const</span> developer = &#123;
-              </p>
-              <p className="pl-4">
-                name: <span className="text-green-400">'Emanuel Monzón'</span>,
-              </p>
-              <p className="pl-4">
-                role: <span className="text-green-400">'Full Stack Architect'</span>,
-              </p>
-              <p className="pl-4">
-                focus: <span className="text-green-400">'Performance & UX'</span>,
-              </p>
-              <p className="pl-4">
-                vision:{" "}
-                <span className="text-green-400">'Clean code, beautiful UI'</span>
-              </p>
-              <p>&#125;;</p>
-              <p>&nbsp;</p>
-              <p>
-                <span className="text-indigo-400">while</span> (opportunity) &#123;
-              </p>
-              <p className="pl-4">solve(complexProblems);</p>
-              <p className="pl-4">create(aestheticInterfaces);</p>
-              <p>&#125;</p>
-            </div>
-
-            {/* Footer */}
-            <div className="bg-card-bg rounded-2xl p-4 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center">
-                  <Rocket className="text-white" size={20} />
+          {/* Minimalist Terminal Showcase */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="lg:col-span-5 w-full"
+          >
+            <div className="rounded-2xl border border-border bg-surface shadow-xl overflow-hidden font-mono text-xs">
+              {/* Terminal Window Bar */}
+              <div className="flex items-center justify-between border-b border-border px-4 py-3 bg-surface-hover/50">
+                <div className="flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/70" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
                 </div>
-                <div>
-                  <p className="text-xs font-bold text-fg">Latest App Build</p>
-                  <p className="text-[10px] text-muted">V1.2.4 — 100% test pass</p>
+                <div className="flex items-center gap-1.5 text-muted text-[11px]">
+                  <Terminal size={12} className="text-primary" />
+                  <span>emanuel.ts</span>
                 </div>
+                <div className="w-10" />
               </div>
-              <div className="h-6 w-20 bg-primary/20 rounded-full flex items-center justify-center">
-                <span className="text-[10px] text-primary-light font-bold">ACTIVE</span>
+
+              {/* Code Editor Content */}
+              <div className="p-6 space-y-1.5 text-muted leading-relaxed">
+                <p>
+                  <span className="text-indigo-400">const</span> architect = &#123;
+                </p>
+                <p className="pl-4">
+                  name: <span className="text-emerald-400">'Emanuel Monzón'</span>,
+                </p>
+                <p className="pl-4">
+                  role: <span className="text-emerald-400">'Systems Architect'</span>,
+                </p>
+                <p className="pl-4">
+                  university: <span className="text-emerald-400">'USAC — Engineering'</span>,
+                </p>
+                <p className="pl-4">
+                  collective: <span className="text-emerald-400">'@Trebol4Devop'</span>,
+                </p>
+                <p className="pl-4">
+                  focus: <span className="text-emerald-400">'Cloud &amp; Distributed Systems'</span>
+                </p>
+                <p>&#125;;</p>
+                <p>&nbsp;</p>
+                <p>
+                  <span className="text-indigo-400">while</span> (craft &amp;&amp; resilience) &#123;
+                </p>
+                <p className="pl-4 text-fg">build(scalableArchitecture);</p>
+                <p className="pl-4 text-fg">polish(userExperience);</p>
+                <p>&#125;</p>
+              </div>
+
+              {/* Terminal Footer Status Bar */}
+              <div className="border-t border-border px-4 py-2.5 bg-surface-hover/30 flex items-center justify-between text-[11px]">
+                <div className="flex items-center gap-2 text-muted">
+                  <Activity size={13} className="text-primary" />
+                  <span>Production Ready</span>
+                </div>
+                <span className="text-primary font-bold">ONLINE</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+
+        {/* Seamless Embedded Mini Space Invaders (Borderless & Integrated into Canvas) */}
+        <div className="mt-10">
+          <SpaceInvaders />
+        </div>
+      </div>
     </section>
   );
 };
