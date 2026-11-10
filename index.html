@@ -1,19 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Emanuel Monzón" />
-    <meta name="description" content="Emanuel Monzón's Developer Portfolio showcasing projects, skills, and experience in software development." />
-    <meta name="keywords" content="Emanuel Monzón, developer portfolio, software development, projects, skills, experience" />
+    <meta name="author" content="José Emanuel Monzón Lémus" />
+    <meta name="description" content="Emanuel Monzón — Ingeniero en Ciencias y Sistemas & Systems Architect. Portafolio de ingeniería de software, arquitecturas distribuidas y diseño web." />
+    <meta name="keywords" content="Emanuel Monzón, Systems Architect, Software Engineer, USAC, Trebol4Devop, Distributed Systems, React, TypeScript, Python, Flutter" />
     <meta name="robots" content="index, follow" />
-    <link rel="icon" href="/public/assets/images/code.png" />
+    <link rel="icon" href="/assets/images/code.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="google-site-verification" content="4Mzl8w7Q8MXOk6LtYL1Cl7KicrmHYPQKYEFnRLoCtDQ" />
-    <title>Emanuel Monzón | Developer Portfolio</title>
+    <title>Emanuel Monzón — Systems Architect & Developer</title>
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme');
+          if (saved === 'light') {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          }
+        } catch(e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

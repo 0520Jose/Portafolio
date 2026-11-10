@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
 
 export const useTheme = (initialTheme: string = "dark") => {
-  const [theme, setTheme] = useState(initialTheme);
+  const [theme, setTheme] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") {
+        return saved;
+      }
+    }
+    return initialTheme;
+  });
 
   useEffect(() => {
     const root = document.documentElement;
@@ -11,6 +19,11 @@ export const useTheme = (initialTheme: string = "dark") => {
     } else {
       root.classList.add("light");
       root.classList.remove("dark");
+    }
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      // ignore
     }
   }, [theme]);
 
