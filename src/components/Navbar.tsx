@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Code2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeToggle } from "./ThemeToggle";
@@ -16,7 +17,7 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,91 +26,95 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
   const navLinks = ["about", "projects", "skills", "contact"];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${
-        scrolled ? "bg-bg/80 backdrop-blur-md border-b border-border" : "bg-transparent"
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/80 dark:bg-[#0a0a0a]/85 backdrop-blur-md border-b border-black/[0.06] dark:border-white/[0.08] shadow-xs"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between relative">
-        <div
-          className="flex items-center gap-2 group cursor-pointer z-50"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      <div className="max-w-6xl mx-auto px-6 h-16 sm:h-20 flex items-center justify-between">
+        {/* Brand Monogram & Identity */}
+        <a
+          href="#about"
+          className="flex items-center gap-3 group text-fg cursor-pointer"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-            <Code2 className="text-white" size={22} />
-          </div>
-          <span className="font-display font-bold text-xl tracking-tight text-fg">
-            Emanuel M.
+          <span className="font-serif italic text-2xl font-normal leading-none text-neutral-900 dark:text-white group-hover:opacity-80 transition-opacity">
+            EM
           </span>
-        </div>
+          <span className="text-xs font-sans font-semibold tracking-[0.14em] uppercase leading-tight text-neutral-900 dark:text-white">
+            Emanuel Monzón
+            <span className="block text-[10px] tracking-[0.12em] text-neutral-500 dark:text-neutral-400 font-normal normal-case font-mono">
+              Systems Architect &amp; Dev
+            </span>
+          </span>
+        </a>
 
-        <div className="hidden md:flex items-center gap-6">
-          {navItems?.map?.((item: string, index: number) => (
-            <a
-              key={item}
-              href={`#${navLinks[index]}`}
-              className="text-sm font-medium text-muted hover:text-fg transition-colors"
-            >
-              {item}
-            </a>
-          ))}
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-8">
+          <nav className="flex items-center gap-6 text-xs uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
+            {navItems?.map?.((item: string, index: number) => (
+              <a
+                key={item}
+                href={`#${navLinks[index]}`}
+                className="relative hover:text-black dark:hover:text-white transition-colors py-2 font-medium group"
+              >
+                {item}
+                {/* Animated underline reveal */}
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-neutral-900 dark:bg-white group-hover:w-full transition-all duration-300 ease-out" />
+              </a>
+            ))}
+          </nav>
 
           <div className="flex items-center gap-3 border-l border-border pl-6">
             <ThemeToggle theme={theme} onToggle={onThemeToggle} />
             <LanguageSelector />
           </div>
-
-          <a
-            href="#contact"
-            className="px-5 py-2.5 bg-fg text-bg rounded-xl text-xs font-bold hover:bg-primary hover:text-white transition-all duration-200"
-          >
-            {t("hireMe")}
-          </a>
         </div>
 
-        <div className="md:hidden flex items-center gap-4 z-50">
+        {/* Mobile Controls */}
+        <div className="md:hidden flex items-center gap-3">
           <ThemeToggle theme={theme} onToggle={onThemeToggle} />
           <LanguageSelector />
-          <button 
-            className="text-fg" 
+          <button
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+            className="p-2 rounded-xl hover:bg-surface-hover text-neutral-800 dark:text-neutral-200 hover:text-primary transition-colors cursor-pointer border-0"
+            aria-label="Toggle Navigation Menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-bg border-b border-border shadow-lg py-4 px-6 flex flex-col gap-4 md:hidden"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-white dark:bg-[#0a0a0a] border-b border-border px-6 py-6 space-y-4 shadow-lg"
           >
-            {navItems?.map?.((item: string, index: number) => (
-              <a
-                key={item}
-                href={`#${navLinks[index]}`}
-                onClick={() => setIsOpen(false)}
-                className="text-lg font-medium text-fg hover:text-primary transition-colors block py-2"
-              >
-                {item}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="w-full text-center px-5 py-3 bg-fg text-bg rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300 mt-2"
-            >
-              {t("hireMe")}
-            </a>
+            <nav className="flex flex-col space-y-3">
+              {navItems?.map?.((item: string, index: number) => (
+                <a
+                  key={item}
+                  href={`#${navLinks[index]}`}
+                  onClick={() => setIsOpen(false)}
+                  className="text-base font-serif text-neutral-900 dark:text-white hover:opacity-75 transition-opacity py-1"
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </header>
   );
 };

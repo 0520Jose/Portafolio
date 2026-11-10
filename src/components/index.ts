@@ -7,3 +7,8 @@ export { Footer } from "./Footer";
 export { ThemeToggle } from "./ThemeToggle";
 export { LanguageSelector } from "./LanguageSelector";
 export { SpaceInvaders } from "./SpaceInvaders";
+export { AmbientParticles } from "./AmbientParticles";
+export { MacWindow } from "./MacWindow";
+export { ThreeBackground } from "./ThreeBackground";
+export { Cylindrical3DGallery } from "./Cylindrical3DGallery";
+export * from "./JapaneseDecorations";

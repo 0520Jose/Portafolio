@@ -7,6 +7,7 @@ import fr from './locales/fr/translation.json';
 import de from './locales/de/translation.json';
 import it from './locales/it/translation.json';
 import pt from './locales/pt/translation.json';
+import ja from './locales/ja/translation.json';
 
 i18n
     .use(initReactI18next)
@@ -17,7 +18,8 @@ i18n
         fr: { translation: fr },
         de: { translation: de },
         it: { translation: it },
-        pt: { translation: pt }
+        pt: { translation: pt },
+        ja: { translation: ja }
     },
     lng: 'es',
     fallbackLng: 'en',

@@ -16,6 +16,8 @@
   "explore": "Explore Projects",
   "systemShowcase": "SYSTEM SHOWCASE",
   "projectsTitle": "Featured Projects",
+  "projectsTitle1": "Featured",
+  "projectsTitle2": "Projects",
   "projectsDesc": "Production-grade systems, microservices architectures, and collaborative engineering works.",
   "viewAll": "View all on GitHub",
   "demo": "Live Demo",
@@ -73,9 +75,9 @@
       "category": "Ecosystem & Organization"
     },
     {
-      "title": "Interactive Modern Portfolio",
-      "desc": "High-fidelity personal showcase featuring 6-language internationalization, theme toggling, and decoupled architecture.",
-      "category": "Frontend & UI/UX"
+      "title": "Comunidad USAC",
+      "desc": "Collaborative student platform for Universidad de San Carlos de Guatemala featuring an academic marketplace, study groups, and community modules.",
+      "category": "Student Ecosystem & Flutter"
     },
     {
       "title": "PEMTREE",
@@ -83,9 +85,9 @@
       "category": "Academic Platform & React"
     },
     {
-      "title": "USAC Campus Map",
-      "desc": "Community geospatial interactive platform providing campus routing and faculty landmarks at USAC.",
-      "category": "Web GIS & Community"
+      "title": "TODOMIGOBGT",
+      "desc": "Unified civic governance platform and citizen alert network in Guatemala built on Cloudflare Workers, R2, and an ETL pipeline.",
+      "category": "Civic Governance & Cloud"
     },
     {
       "title": "Cartesian Plane Library",

@@ -1,3 +1,4 @@
+import "./lib/gsap"; // Register GSAP plugins globally (must be before components)
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';

@@ -1,65 +1,201 @@
-import { motion } from "motion/react";
-import { ExternalLink, Github, Linkedin, Mail, Globe, Terminal, Activity } from "lucide-react";
+import { useRef } from "react";
+import { Github, Linkedin, Mail, Globe, ArrowUpRight, Terminal } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "../lib/gsap";
+import { useCardTilt } from "../hooks/useCardTilt";
 import { SpaceInvaders } from "./SpaceInvaders";
+import { EnsoCircle } from "./JapaneseDecorations";
 
-export const Hero = () => {
-  const { t } = useTranslation();
+interface HeroProps {
+  onOpenArcade?: () => void;
+}
+
+export const Hero = ({ onOpenArcade }: HeroProps = {}) => {
+  const { t, i18n } = useTranslation();
+  const { ref: macTiltRef, onMouseMove: onMacMouseMove, onMouseLeave: onMacMouseLeave } = useCardTilt(4.5);
+
+  // Refs for GSAP timeline orchestration
+  const containerRef = useRef<HTMLElement>(null);
+  const heroLine1Ref = useRef<HTMLSpanElement>(null);
+  const heroLine2Ref = useRef<HTMLSpanElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
+
+  useGSAP(
+    () => {
+      if (!containerRef.current) return;
+
+      const targets = {
+        line1: heroLine1Ref.current,
+        line2: heroLine2Ref.current,
+        desc: descRef.current,
+        cta: ctaRef.current,
+        footer: footerRef.current,
+        card: cardRef.current,
+      };
+
+      // On language change: instant reveal, no re-animation
+      if (hasAnimated.current) {
+        gsap.set(Object.values(targets).filter(Boolean), {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          yPercent: 0,
+        });
+        return;
+      }
+
+      // Set initial states (hidden) — prevents flash
+      gsap.set([targets.line1, targets.line2], { yPercent: 110 });
+      gsap.set(targets.desc, { opacity: 0, y: 20 });
+      gsap.set(targets.cta, { opacity: 0, y: 20 });
+      gsap.set(targets.footer, { opacity: 0, y: 12 });
+      gsap.set(targets.card, { opacity: 0, x: 50, scale: 0.96 });
+
+      // Cinematic entrance timeline
+      const tl = gsap.timeline({ delay: 0.15 });
+
+      tl
+        // 1. First headline line slides up from mask
+        .to(
+          targets.line1,
+          {
+            yPercent: 0,
+            duration: 1.1,
+            ease: "power4.out",
+          }
+        )
+        // 2. Second headline line follows (staggered)
+        .to(
+          targets.line2,
+          {
+            yPercent: 0,
+            duration: 1.1,
+            ease: "power4.out",
+          },
+          "-=0.75"
+        )
+        // 4. Description fades in
+        .to(
+          targets.desc,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power3.out",
+          },
+          "-=0.5"
+        )
+        // 5. CTAs stagger in
+        .to(
+          targets.cta,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            ease: "power3.out",
+          },
+          "-=0.3"
+        )
+        // 6. Footer strip resolves
+        .to(
+          targets.footer,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power2.out",
+          },
+          "-=0.2"
+        )
+        // 7. Architecture Mac Window slides in with 3D scale
+        .to(
+          targets.card,
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 0.9,
+            ease: "power3.out",
+          },
+          "-=1.0"
+        );
+
+      hasAnimated.current = true;
+    },
+    { scope: containerRef, dependencies: [i18n.language] }
+  );
 
   return (
-    <section id="about" className="relative min-h-screen flex flex-col justify-center pt-28 pb-16 px-6 overflow-hidden">
-      {/* Blueprint Grid Texture */}
+    <section
+      id="about"
+      ref={containerRef}
+      className="relative min-h-[92vh] flex flex-col justify-center pt-32 pb-20 md:pt-40 md:pb-28 px-6 overflow-hidden bg-[#fcfbf9] dark:bg-[#0c0c0e] transition-colors duration-700"
+    >
+      {/* Shoji Lattice Grid Texture */}
       <div className="pixel-grid absolute inset-0 z-0 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-          {/* Main Typography Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="lg:col-span-7 space-y-6"
-          >
-            {/* Live Status Pill */}
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-border bg-surface text-fg text-xs font-mono">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              <span className="tracking-wide">{t("available")}</span>
-            </div>
+      {/* Zen Ensō Art Watermark */}
+      <div className="absolute top-24 right-4 lg:right-20 pointer-events-none z-0 text-neutral-800/10 dark:text-neutral-500/15">
+        <EnsoCircle size={460} />
+      </div>
 
-            {/* Monumental Headline with Space Grotesk */}
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-fg leading-[0.95]">
-              {t("heroTitle1")}{" "}
-              <span className="text-primary underline decoration-primary/30 underline-offset-8">
-                {t("heroTitle2")}
-              </span>{" "}
-              {t("heroTitle3")}
+      {/* Main Editorial Typography & Mac Window */}
+      <div className="max-w-7xl mx-auto w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Main Editorial Typography Column */}
+          <div className="lg:col-span-6 space-y-7">
+            {/* Monumental Headline with Clip-Mask Reveal & Indigo Signature Accent */}
+            <h1 className="text-5xl sm:text-7xl md:text-8xl xl:text-[6.5rem] font-bold font-display tracking-tight text-neutral-900 dark:text-white leading-[0.95]">
+              <span className="overflow-hidden block">
+                <span ref={heroLine1Ref} className="block will-change-transform">
+                  {t("heroTitle1")}{" "}
+                  <span className="text-primary underline decoration-primary/40 underline-offset-8 font-serif italic">
+                    {t("heroTitle2")}
+                  </span>
+                </span>
+              </span>
+              <span className="overflow-hidden block">
+                <span ref={heroLine2Ref} className="block will-change-transform">
+                  {t("heroTitle3")}
+                </span>
+              </span>
             </h1>
 
-            {/* Description */}
-            <p className="text-muted text-base sm:text-lg md:text-xl max-w-xl leading-relaxed">
-              {t("heroDesc1")} <span className="text-fg font-medium">{t("heroDesc2")}</span>{" "}
+            {/* Editorial Description */}
+            <p
+              ref={descRef}
+              className="text-neutral-600 dark:text-neutral-300 text-lg sm:text-xl leading-relaxed max-w-xl font-sans"
+            >
+              {t("heroDesc1")}{" "}
+              <span className="text-neutral-900 dark:text-white font-medium">
+                {t("heroDesc2")}
+              </span>{" "}
               {t("heroDesc3")}
             </p>
 
-            {/* Call to Actions */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            {/* Direct Calls to Action (Fluid, Seamless, Crisp Engineering Aesthetic) */}
+            <div ref={ctaRef} className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href="#projects"
-                className="px-6 py-3.5 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all duration-200 flex items-center gap-2 text-sm shadow-sm"
+                className="btn-fluid inline-flex min-h-12 items-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold text-xs font-mono uppercase tracking-wider rounded-lg shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 cursor-pointer"
               >
-                {t("explore")} <ExternalLink size={16} />
+                <span>{t("explore")}</span>
+                <ArrowUpRight size={16} />
               </a>
 
-              <div className="flex items-center gap-3 px-4 py-2 border border-border rounded-xl bg-surface">
+              <div className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface/90 backdrop-blur-md shadow-md border-0">
                 <a
                   href="https://github.com/0520Jose"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted hover:text-fg transition-colors p-1"
-                  title="GitHub"
+                  className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary-light transition-colors p-2 rounded-md hover:bg-surface-hover"
+                  title="GitHub Profile"
+                  aria-label="GitHub"
                 >
                   <Github size={18} />
                 </a>
@@ -67,8 +203,9 @@ export const Hero = () => {
                   href="https://trebol4devop.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted hover:text-primary transition-colors p-1"
-                  title="Trebol4Devop Organization"
+                  className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary-light transition-colors p-2 rounded-md hover:bg-surface-hover"
+                  title="Trebol4Devop Engineering Collective"
+                  aria-label="Organización Trebol4Devop"
                 >
                   <Globe size={18} />
                 </a>
@@ -76,88 +213,99 @@ export const Hero = () => {
                   href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted hover:text-fg transition-colors p-1"
-                  title="LinkedIn"
+                  className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary-light transition-colors p-2 rounded-md hover:bg-surface-hover"
+                  title="LinkedIn Profile"
+                  aria-label="LinkedIn"
                 >
                   <Linkedin size={18} />
                 </a>
                 <a
                   href="mailto:emanuelmonzon360@gmail.com"
-                  className="text-muted hover:text-fg transition-colors p-1"
+                  className="text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-primary-light transition-colors p-2 rounded-md hover:bg-surface-hover"
                   title="Email"
+                  aria-label="Email"
                 >
                   <Mail size={18} />
                 </a>
               </div>
             </div>
-          </motion.div>
 
-          {/* Minimalist Terminal Showcase */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:col-span-5 w-full"
-          >
-            <div className="rounded-2xl border border-border bg-surface shadow-xl overflow-hidden font-mono text-xs">
-              {/* Terminal Window Bar */}
-              <div className="flex items-center justify-between border-b border-border px-4 py-3 bg-surface-hover/50">
+            {/* Location & Academic Footer Strip */}
+            <div
+              ref={footerRef}
+              className="pt-6 flex items-center gap-3 text-xs font-mono uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400"
+            >
+              <span className="w-8 h-[2px] bg-primary/40 inline-block rounded-full" />
+              <span>Guatemala • USAC Ingeniería • @Trebol4Devop</span>
+            </div>
+          </div>
+
+          {/* Right Column: Authentic macOS Terminal Window with 3D Tilt (Zero Borders, Crisp 12px Radius) */}
+          <div ref={cardRef} className="lg:col-span-6 w-full">
+            <div
+              ref={macTiltRef}
+              onMouseMove={onMacMouseMove}
+              onMouseLeave={onMacMouseLeave}
+              className="mac-window rounded-xl bg-surface/95 shadow-2xl backdrop-blur-md overflow-hidden font-mono text-xs transition-transform duration-200 ease-out will-change-transform border-0 w-full"
+            >
+              {/* macOS Window Chrome Header with Traffic Lights */}
+              <div className="mac-titlebar px-6 py-4 bg-surface-hover/80 flex items-center justify-between border-0">
                 <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/70" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
+                  <div className="mac-dot mac-dot-close" title="Cerrar" />
+                  <div className="mac-dot mac-dot-minimize" title="Minimizar" />
+                  <div className="mac-dot mac-dot-maximize" title="Maximizar" />
                 </div>
-                <div className="flex items-center gap-1.5 text-muted text-[11px]">
-                  <Terminal size={12} className="text-primary" />
-                  <span>emanuel.ts</span>
+
+                <div className="flex items-center gap-1.5 text-neutral-600 dark:text-neutral-300 text-[11px] font-semibold">
+                  <Terminal size={13} className="text-primary" />
+                  <span>emanuel.ts — 80×28</span>
                 </div>
-                <div className="w-10" />
+
+                <div className="w-12" />
               </div>
 
-              {/* Code Editor Content */}
-              <div className="p-6 space-y-1.5 text-muted leading-relaxed">
+              {/* Code Editor Body */}
+              <div className="p-6 sm:p-7 space-y-2.5 text-neutral-600 dark:text-neutral-300 leading-relaxed bg-[#0c0d12]/95 dark:bg-[#0a0b0e]/95 text-[#f1f5f9]">
                 <p>
-                  <span className="text-indigo-400">const</span> architect = &#123;
+                  <span className="text-indigo-400 font-semibold">const</span> architect = &#123;
                 </p>
                 <p className="pl-4">
-                  name: <span className="text-emerald-400">'Emanuel Monzón'</span>,
+                  name: <span className="text-emerald-400">'José Emanuel Monzón'</span>,
                 </p>
                 <p className="pl-4">
-                  role: <span className="text-emerald-400">'Systems Architect'</span>,
+                  role: <span className="text-emerald-400">'Distributed Systems &amp; Cloud Architect'</span>,
                 </p>
                 <p className="pl-4">
-                  university: <span className="text-emerald-400">'USAC — Engineering'</span>,
+                  faculty: <span className="text-emerald-400">'USAC — Fac. Ingeniería'</span>,
                 </p>
                 <p className="pl-4">
-                  collective: <span className="text-emerald-400">'@Trebol4Devop'</span>,
+                  collective: <span className="text-indigo-300">'@Trebol4Devop'</span>,
                 </p>
                 <p className="pl-4">
-                  focus: <span className="text-emerald-400">'Cloud &amp; Distributed Systems'</span>
+                  stack: [<span className="text-amber-300">'Go'</span>, <span className="text-amber-300">'Docker'</span>, <span className="text-amber-300">'Kubernetes'</span>, <span className="text-amber-300">'React'</span>]
                 </p>
                 <p>&#125;;</p>
-                <p>&nbsp;</p>
+                <div className="my-3 border-b border-white/10" />
                 <p>
-                  <span className="text-indigo-400">while</span> (craft &amp;&amp; resilience) &#123;
+                  <span className="text-indigo-400 font-semibold">async function</span> <span className="text-blue-400">deploySystems</span>() &#123;
                 </p>
-                <p className="pl-4 text-fg">build(scalableArchitecture);</p>
-                <p className="pl-4 text-fg">polish(userExperience);</p>
+                <p className="pl-4 text-neutral-400">
+                  <span className="text-indigo-400">await</span> samnu.<span className="text-purple-300">computeAlgorithms</span>(30);
+                </p>
+                <p className="pl-4 text-neutral-400">
+                  <span className="text-indigo-400">await</span> pemtree.<span className="text-purple-300">renderGraph</span>();
+                </p>
+                <p className="pl-4 text-emerald-400">
+                  return <span className="text-emerald-300">"Production grade resilient"</span>;
+                </p>
                 <p>&#125;</p>
               </div>
-
-              {/* Terminal Footer Status Bar */}
-              <div className="border-t border-border px-4 py-2.5 bg-surface-hover/30 flex items-center justify-between text-[11px]">
-                <div className="flex items-center gap-2 text-muted">
-                  <Activity size={13} className="text-primary" />
-                  <span>Production Ready</span>
-                </div>
-                <span className="text-primary font-bold">ONLINE</span>
-              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        {/* Seamless Embedded Mini Space Invaders (Borderless & Integrated into Canvas) */}
-        <div className="mt-10">
+        {/* Seamless Embedded 3D Space Invaders Experience */}
+        <div id="space-invaders-zone" className="mt-14 sm:mt-16 w-full border-0">
           <SpaceInvaders />
         </div>
       </div>

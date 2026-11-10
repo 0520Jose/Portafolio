@@ -1,42 +1,66 @@
-import { Github, Linkedin, Mail, Code2, Globe } from "lucide-react";
+import { Github, Linkedin, Mail, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import React from "react";
 
 export const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="py-12 border-t border-border bg-bg">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-card-bg rounded-lg flex items-center justify-center">
-            <Code2 size={16} className="text-muted" />
-          </div>
-          <span className="font-display font-bold text-lg tracking-tight text-fg">
-            Emanuel M.
+    <footer className="py-12 bg-[#efeae3] dark:bg-[#08080a] transition-colors duration-700">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex items-center gap-3">
+          <span className="font-serif italic text-xl leading-none text-neutral-900 dark:text-white">
+            EM
+          </span>
+          <span className="text-xs font-sans font-medium tracking-wider uppercase text-neutral-600 dark:text-neutral-400">
+            Emanuel Monzón
+            <span className="block text-[10px] text-neutral-400 font-mono tracking-widest normal-case">
+              USAC • Engineering
+            </span>
           </span>
         </div>
 
-        <p className="text-muted text-xs">© 2026 Emanuel Monzón. {t("rights")}</p>
+        <p className="text-neutral-500 text-xs font-mono">
+          © 2026 Emanuel Monzón. {t("rights")}
+        </p>
 
-        <div className="flex items-center gap-6">
-          <a href="https://github.com/0520Jose" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg transition-colors" title="GitHub">
-            <Github size={18} />
-          </a>
-          <a href="https://trebol4devop.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-emerald-400 transition-colors" title="Trebol4Devop Organization">
-            <Globe size={18} />
-          </a>
-          <a href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg transition-colors" title="LinkedIn">
-            <Linkedin size={18} />
-          </a>
-          <a 
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=emanuelmonzon360@gmail.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-muted hover:text-fg transition-colors"
-            title="Email"
+        <div className="flex items-center gap-5">
+          <a
+            href="https://github.com/0520Jose"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
+            title="GitHub"
+            aria-label="GitHub"
           >
-            <Mail size={18} />
+            <Github size={16} />
+          </a>
+          <a
+            href="https://trebol4devop.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
+            title="Organización Trebol4Devop"
+            aria-label="Trebol4Devop"
+          >
+            <Globe size={16} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/josé-emanuel-monzón-lémus-4970b4237"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
+            title="LinkedIn"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={16} />
+          </a>
+          <a
+            href="mailto:emanuelmonzon360@gmail.com"
+            className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
+            title="Email"
+            aria-label="Email"
+          >
+            <Mail size={16} />
           </a>
         </div>
       </div>

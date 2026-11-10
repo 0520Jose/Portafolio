@@ -1,42 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Newsreader", "Playfair Display", Georgia, serif;
+  --font-display: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-primary: #6366f1;
-  --color-primary-light: #818cf8;
-  --color-primary-dark: #4f46e5;
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent-gold: var(--accent-gold);
   --color-bg: var(--bg);
   --color-surface: var(--surface);
   --color-surface-hover: var(--surface-hover);
   --color-muted: var(--muted);
+  --color-muted-dim: var(--muted-dim);
   --color-fg: var(--fg);
   --color-border: var(--border);
   --color-border-hover: var(--border-hover);
+  --color-vermilion: #d9483b;
 }
 
 @layer base {
   :root {
-    --bg: #ffffff;
-    --surface: #f8fafc;
-    --surface-hover: #f1f5f9;
+    --bg: #fcfbf9;
+    --surface: #ffffff;
+    --surface-hover: #f3f4f6;
     --muted: #64748b;
+    --muted-dim: #94a3b8;
     --fg: #0f172a;
     --border: rgba(0, 0, 0, 0.08);
-    --border-hover: rgba(0, 0, 0, 0.16);
+    --border-hover: rgba(99, 102, 241, 0.35);
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --primary-hover: #4f46e5;
+    --accent-gold: #eab308;
+    --accent-vermilion: #d9483b;
   }
 
-  :root.dark {
-    --bg: #09090b;
-    --surface: #121215;
-    --surface-hover: #18181c;
+  :root.dark,
+  .dark {
+    --bg: #0c0c0e;
+    --surface: #141418;
+    --surface-hover: #1c1c22;
     --muted: #94a3b8;
-    --fg: #f8fafc;
-    --border: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(255, 255, 255, 0.18);
+    --muted-dim: #64748b;
+    --fg: #fafafa;
+    --border: rgba(255, 255, 255, 0.07);
+    --border-hover: rgba(99, 102, 241, 0.45);
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --primary-hover: #4f46e5;
+    --accent-gold: #fbbf24;
+    --accent-vermilion: #e05344;
   }
 
   html {
@@ -67,22 +86,113 @@
   }
 }
 
-/* Minimalist Precision Cards */
-.bento-card {
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  @apply rounded-2xl p-6 transition-all duration-200 relative overflow-hidden;
+/* Clean Seamless Fluid Cards (SAMNU Architecture - Zero Borders) */
+.feature-card {
+  background: var(--surface);
+  border: 0 !important;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.65s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
 }
 
-.bento-card:hover {
-  border-color: var(--border-hover);
+:root.dark .feature-card,
+.dark .feature-card {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
 }
 
-/* Subtle Architectural Blueprint Grid */
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.22);
+}
+
+:root.dark .feature-card:hover,
+.dark .feature-card:hover {
+  box-shadow: 0 26px 54px -10px rgba(99, 102, 241, 0.32);
+}
+
+/* Fluid Animated Buttons with Soft Glow */
+.btn-fluid {
+  will-change: transform, box-shadow;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 0 !important;
+  border-radius: 14px;
+}
+
+.btn-fluid:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -6px rgba(99, 102, 241, 0.45);
+}
+
+.btn-fluid:active {
+  transition-duration: 0.15s;
+  transform: translateY(-0.5px) scale(0.985);
+}
+
+/* Subtle Japanese Shoji Paper Lattice Grid (Zen Architecture) */
 .pixel-grid {
-  background-image: radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0);
-  background-size: 32px 32px;
-  opacity: 0.5;
+  background-image: 
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 54px 54px;
+  opacity: 0.16;
+}
+
+/* macOS Window Design Elements (Clean, Seamless, Borderless Elevation) */
+.mac-window {
+  background-color: var(--surface);
+  border: 0 !important;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.12), 0 2px 10px -2px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root.dark .mac-window,
+.dark .mac-window {
+  box-shadow: 0 28px 65px -15px rgba(0, 0, 0, 0.75);
+}
+
+.mac-window:hover {
+  box-shadow: 0 24px 50px -12px rgba(99, 102, 241, 0.18);
+}
+
+:root.dark .mac-window:hover,
+.dark .mac-window:hover {
+  box-shadow: 0 32px 70px -15px rgba(99, 102, 241, 0.22);
+}
+
+.mac-titlebar {
+  background: var(--surface-hover);
+  border: 0 !important;
+  @apply px-4 py-3.5 flex items-center justify-between select-none;
+}
+
+.mac-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 9999px;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.mac-dot:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.mac-dot-close {
+  background-color: #ff5f56;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+}
+
+.mac-dot-minimize {
+  background-color: #ffbd2e;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+}
+
+.mac-dot-maximize {
+  background-color: #27c93f;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
 }
 
 /* Continuous Technology Marquee */
@@ -117,4 +227,36 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+/* Modal entrance (used for skill detail dialog) */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Nav link underline reveal transition */
+.nav-underline {
+  position: relative;
+}
+
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-underline:hover::after {
+  width: 100%;
 }

@@ -16,6 +16,8 @@
   "explore": "Explorer les Projets",
   "systemShowcase": "VITRINE DES SYSTÈMES",
   "projectsTitle": "Projets en Vedette",
+  "projectsTitle1": "Projets en",
+  "projectsTitle2": "Vedette",
   "projectsDesc": "Systèmes en production, architectures de microservices et travaux d'ingénierie collaborative.",
   "viewAll": "Voir tout sur GitHub",
   "demo": "Démo en direct",
@@ -73,9 +75,9 @@
       "category": "Écosystème & Organisation"
     },
     {
-      "title": "Portfolio Interactif",
-      "desc": "Vitrine personnelle haute fidélité avec internationalisation en 6 langues, thèmes dynamiques et architecture modulaire.",
-      "category": "Frontend & UI/UX"
+      "title": "Comunidad USAC",
+      "desc": "Plateforme collaborative pour la communauté universitaire de l'USAC avec marketplace académique, groupes d'étude et gestion communautaire.",
+      "category": "Écosystème Étudiant & Flutter"
     },
     {
       "title": "PEMTREE",
@@ -83,9 +85,9 @@
       "category": "Plateforme Académique & React"
     },
     {
-      "title": "Carte du Campus USAC",
-      "desc": "Plateforme géospatiale interactive pour l'orientation et la navigation sur le campus universitaire.",
-      "category": "SIG Web & Communauté"
+      "title": "TODOMIGOBGT",
+      "desc": "Plateforme civique unifiée et système d'alertes citoyennes au Guatemala avec architecture en bordure Cloudflare Workers et R2.",
+      "category": "Gouvernance Numérique & Cloud"
     },
     {
       "title": "Cartesian Plane Library",
